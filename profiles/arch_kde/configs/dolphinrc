@@ -1,0 +1,44 @@
+MenuBar=Disabled
+
+[DetailsMode]
+IconSize=22
+PreviewSize=22
+RightPadding=0
+SidePadding=0
+
+[FileDialogSize]
+2 screens: Height=720
+2 screens: Width=1280
+
+[General]
+OpenNewTabAfterLastTab=true
+RememberOpenedTabs=false
+ShowSpaceInfo=false
+ShowZoomSlider=false
+Version=202
+ViewPropsTimestamp=2025,5,4,18,45,45.643
+
+[IconsMode]
+PreviewSize=224
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[Notification Messages]
+ConfirmOpenManyFolders=false
+
+[PreviewSettings]
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer,gsf-office
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly

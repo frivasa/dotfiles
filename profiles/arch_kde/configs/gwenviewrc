@@ -1,0 +1,13 @@
+[General]
+LastUsedVersion=210800
+
+[ImageView]
+EnlargeSmallerImages=true
+MouseWheelBehavior=MouseWheelBehavior::Browse
+ZoomMode=ZoomMode::KeepSame
+
+[MainWindow]
+MenuBar=Disabled
+
+[SideBar]
+InformationSplitterSizes=211,244

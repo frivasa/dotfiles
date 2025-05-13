@@ -1,0 +1,48 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+models:
+  - name: Llama 3.1 8B
+    provider: ollama
+    model: llama3.1:8b
+    roles:
+      - chat
+      - edit
+      - apply
+  - name: Qwen2.5-Coder 1.5B
+    provider: ollama
+    model: qwen2.5-coder:1.5b-base
+    roles:
+      - autocomplete
+  - name: Nomic Embed
+    provider: ollama
+    model: nomic-embed-text:latest
+    roles:
+      - embed
+  - name: Ollama Autodetect
+    provider: ollama
+    apiBase: http://localhost:8090
+    model: AUTODETECT
+    roles:
+      - chat
+      - edit
+  - name: qwen autocomplete
+    provider: ollama
+    model: qwen2.5-coder:1.5b-base
+    apiBase: http://localhost:8090
+    roles:
+      - autocomplete
+  - name: Nomic embed (ollama)
+    provider: ollama
+    apiBase: http://localhost:8090
+    model: nomic-embed-text:latest
+    roles:
+      - embed
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase

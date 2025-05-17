@@ -1,7 +1,7 @@
 ﻿###
 ###  vlc 3.0.21
 ###
-asdfasdf
+
 ###
 ### lines beginning with a '#' character are comments
 ###
@@ -1542,10 +1542,10 @@ freetype-font=Noto Sans
 #qt-opacity=1.000000
 
 # Fullscreen controller opacity between 0.1 and 1 (float)
-#qt-fs-opacity=0.800000
+qt-fs-opacity=0.500000
 
 # Resize interface to the native video size (boolean)
-#qt-video-autoresize=1
+qt-video-autoresize=0
 
 # Show playing item name in window title (boolean)
 #qt-name-in-title=1
@@ -1554,7 +1554,7 @@ freetype-font=Noto Sans
 #qt-fs-controller=1
 
 # Save the recently played items in the menu (boolean)
-#qt-recentplay=1
+qt-recentplay=0
 
 # List of words separated by | to filter (string)
 #qt-recentplay-filter=
@@ -3588,7 +3588,7 @@ sout-x264-tune=film
 #audio-time-stretch=1
 
 # Audio output module (string)
-#aout=
+aout=any
 
 # Media role (string)
 #role=video
@@ -3600,7 +3600,7 @@ sout-x264-tune=film
 #audio-visual=none
 
 # Audio resampler (string)
-#audio-resampler=
+audio-resampler=any
 
 # Enable video (boolean)
 #video=1
@@ -3642,7 +3642,7 @@ sout-x264-tune=film
 #disable-screensaver=1
 
 # Show media title on video (boolean)
-#video-title-show=1
+video-title-show=0
 
 # Show video title for x milliseconds (integer)
 #video-title-timeout=5000
@@ -3939,7 +3939,7 @@ vout=any
 #encoder=
 
 # Access module (string)
-#access=
+access=any
 
 # Demux module (string)
 #demux=any
@@ -3999,7 +3999,7 @@ vout=any
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
@@ -4020,7 +4020,7 @@ vout=any
 #random=0
 
 # Repeat all (boolean)
-#loop=0
+loop=1
 
 # Repeat current item (boolean)
 #repeat=0
@@ -4038,7 +4038,7 @@ vout=any
 #start-paused=0
 
 # Auto start (boolean)
-#playlist-autostart=1
+playlist-autostart=1
 
 # Pause on audio communication (boolean)
 #playlist-cork=1
@@ -4098,7 +4098,7 @@ one-instance-when-started-from-file=0
 #interact=1
 
 # Locally collect statistics (boolean)
-#stats=1
+stats=0
 
 # Interface module (string)
 #intf=

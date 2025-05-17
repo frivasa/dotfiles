@@ -14,6 +14,9 @@ x-scheme-handler/chrome=zen.desktop;
 x-scheme-handler/discord=vesktop.desktop;
 x-scheme-handler/http=zen.desktop;
 x-scheme-handler/https=zen.desktop;
+x-scheme-handler/f1mv=MultiViewer for F1.desktop;
+x-scheme-handler/multiviewer=f1multiviewer.desktop;MultiViewer for F1.desktop;
+x-scheme-handler/muvi=MultiViewer for F1.desktop;
 
 [Default Applications]
 application/x-extension-htm=zen.desktop
@@ -31,3 +34,6 @@ x-scheme-handler/chrome=zen.desktop
 x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/http=zen.desktop
 x-scheme-handler/https=zen.desktop
+x-scheme-handler/f1mv=MultiViewer for F1.desktop
+x-scheme-handler/multiviewer=f1multiviewer.desktop
+x-scheme-handler/muvi=MultiViewer for F1.desktop

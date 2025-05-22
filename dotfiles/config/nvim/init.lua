@@ -13,7 +13,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require("plugins.neotree"), -- folder browser
+	-- require("plugins.neotree"), -- folder browser
 	require("plugins.colortheme"), -- font colors
 	require("plugins.bufferline"), -- top bar configuration ("show tabs")
 	require("plugins.lualine"), -- bottom bar config/colors
@@ -29,6 +29,14 @@ require("lazy").setup({
 	require("plugins.dap"), -- debugger
 	require("plugins.codecompanion"), -- ai features
 	require("plugins.ufo-folding"), -- code folding
+	require("plugins.vim-tmux-navigator"), -- code folding
+	require("plugins.snacks"), -- group of QoL plugins
+	-- image: show images/pdfs through kitty (nice)
+	-- bigfile: disable some plugins with large files
+	-- indent: mark indent lines and levels
+	-- notifier: easier to config than mini.notify
+	-- scroll: animate scrolling to make it smoother
+	require("plugins.markdown-preview"), --
 	require("plugins.mini"), -- shitload of plugins
 	-- ai: around-insert helper
 	-- files: yazi-like file browser

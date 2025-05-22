@@ -28,7 +28,10 @@ return {
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
-		opts = {},
+		opts = {
+			rgb_fn = true,
+			mode = "foreground",
+		},
 	},
 	--	{ -- highlight some keywords in comments
 	--		"folke/todo-comments.nvim",

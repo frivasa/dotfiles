@@ -10,64 +10,66 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 		-- Useful status updates for LSP.
-		{
-			"j-hui/fidget.nvim",
-			opts = {
-				progress = {
-					ignore_done_already = false,
-					ignore_empty_message = false,
-					display = {
-						done_ttl = 10,
-						done_style = "Normal",
-						icon_style = "Normal",
-						group_style = "MsgArea",
-					},
-					-- Clear notification group when LSP server detaches
-					clear_on_detach = function(client_id)
-						local client = vim.lsp.get_client_by_id(client_id)
-						return client and client.name or nil
-					end,
-				},
-				-- Options related to notification subsystem
-				notification = {
-					poll_rate = 10, -- How frequently to update and render notifications
-					filter = vim.log.levels.INFO, -- Minimum notifications level
-					override_vim_notify = true, -- Automatically override vim.notify() with Fidget
-					-- Options related to how notifications are rendered as text
-					view = {
-						stack_upwards = true, -- Display notification items from bottom to top
-						icon_separator = " ", -- Separator between group name and icon
-						group_separator = "---", -- Separator between notification groups
-						group_separator_hl = "Normal",
-					},
-					-- Options related to the notification window and buffer
-					window = {
-						normal_hl = "Normal",
-						winblend = 0, -- Background color opacity in the notification window
-						-- border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" }, -- Border around the notification window
-						border = "none",
-						x_padding = 10, -- Padding from right edge of window boundary
-						y_padding = 10, -- Padding from bottom edge of window boundary
-						align = "bottom", -- How to align the notification window
-						relative = "editor", -- What the notification window position is relative to
-					},
-				},
-				-- Options related to integrating with other plugins
-				integration = {
-					["nvim-tree"] = {
-						enable = true, -- Integrate with nvim-tree/nvim-tree.lua (if installed)
-					},
-				},
-				-- Options related to logging
-				logger = {
-					level = vim.log.levels.WARN, -- Minimum logging level
-					max_size = 10000, -- Maximum log file size, in KB
-					float_precision = 0.01, -- Limit the number of decimals displayed for floats
-					-- Where Fidget writes its logs to
-					path = string.format("%s/fidget.nvim.log", vim.fn.stdpath("cache")),
-				},
-			},
-		},
+		-- this fucker contantly says everything is A OK
+		-- making everything not fucking OK, what a fucking pest!
+		-- {
+		-- 	"j-hui/fidget.nvim",
+		-- 	opts = {
+		-- 		progress = {
+		-- 			ignore_done_already = false,
+		-- 			ignore_empty_message = false,
+		-- 			display = {
+		-- 				done_ttl = 10,
+		-- 				done_style = "Normal",
+		-- 				icon_style = "Normal",
+		-- 				group_style = "MsgArea",
+		-- 			},
+		-- 			-- Clear notification group when LSP server detaches
+		-- 			clear_on_detach = function(client_id)
+		-- 				local client = vim.lsp.get_client_by_id(client_id)
+		-- 				return client and client.name or nil
+		-- 			end,
+		-- 		},
+		-- 		-- Options related to notification subsystem
+		-- 		notification = {
+		-- 			poll_rate = 10, -- How frequently to update and render notifications
+		-- 			filter = vim.log.levels.WARN, -- Minimum notifications level
+		-- 			override_vim_notify = true, -- Automatically override vim.notify() with Fidget
+		-- 			-- Options related to how notifications are rendered as text
+		-- 			view = {
+		-- 				stack_upwards = true, -- Display notification items from bottom to top
+		-- 				icon_separator = " ", -- Separator between group name and icon
+		-- 				group_separator = "---", -- Separator between notification groups
+		-- 				group_separator_hl = "Normal",
+		-- 			},
+		-- 			-- Options related to the notification window and buffer
+		-- 			window = {
+		-- 				normal_hl = "Normal",
+		-- 				winblend = 0, -- Background color opacity in the notification window
+		-- 				-- border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" }, -- Border around the notification window
+		-- 				border = "none",
+		-- 				x_padding = 10, -- Padding from right edge of window boundary
+		-- 				y_padding = 10, -- Padding from bottom edge of window boundary
+		-- 				align = "bottom", -- How to align the notification window
+		-- 				relative = "editor", -- What the notification window position is relative to
+		-- 			},
+		-- 		},
+		-- 		-- Options related to integrating with other plugins
+		-- 		integration = {
+		-- 			["nvim-tree"] = {
+		-- 				enable = true, -- Integrate with nvim-tree/nvim-tree.lua (if installed)
+		-- 			},
+		-- 		},
+		-- 		-- Options related to logging
+		-- 		logger = {
+		-- 			level = vim.log.levels.WARN, -- Minimum logging level
+		-- 			max_size = 10000, -- Maximum log file size, in KB
+		-- 			float_precision = 0.01, -- Limit the number of decimals displayed for floats
+		-- 			-- Where Fidget writes its logs to
+		-- 			path = string.format("%s/fidget.nvim.log", vim.fn.stdpath("cache")),
+		-- 		},
+		-- 	},
+		-- },
 
 		-- Allows extra capabilities provided by blink.cmp
 		"saghen/blink.cmp",

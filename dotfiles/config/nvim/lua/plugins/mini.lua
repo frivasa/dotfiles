@@ -18,7 +18,7 @@ return {
 		require("mini.splitjoin").setup()
 		-- ENTER to jump by chars to position hints (noice)
 		require("mini.jump2d").setup()
-		require("mini.notify").setup()
+		-- require("mini.notify").setup()
 		-- color scheme editor :lua require('mini.colors').interactive()
 		-- kinda meh, does not work too well editing external themes
 		-- require("mini.colors").setup()

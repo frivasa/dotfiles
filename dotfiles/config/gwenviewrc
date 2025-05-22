@@ -1,6 +1,7 @@
 [General]
 HistoryEnabled=false
 LastUsedVersion=210800
+ShowHiddenFiles=true
 
 [ImageView]
 EnlargeSmallerImages=true
@@ -12,3 +13,7 @@ MenuBar=Disabled
 
 [SideBar]
 InformationSplitterSizes=211,244
+
+[ThumbnailView]
+ListVideos=false
+ThumbnailSize=320

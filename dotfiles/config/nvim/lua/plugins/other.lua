@@ -6,7 +6,7 @@ return {
 	{ -- keybind hints
 		"folke/which-key.nvim",
 	},
-	{
+	{ -- notifications
 		"folke/noice.nvim",
 		opts = {
 			routes = {
@@ -44,5 +44,16 @@ return {
 		config = function()
 			require("colorizer").setup()
 		end,
+	},
+	-- codecompanion add-ons (mostly markdown)
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {
+			ft = { "markdown", "codecompanion" },
+		},
 	},
 }

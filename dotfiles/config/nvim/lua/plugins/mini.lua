@@ -1,8 +1,6 @@
 return {
 	"echasnovski/mini.nvim",
 	config = function()
-		-- pick (a)round and (i)nsert (ai)
-		require("mini.ai").setup({ n_lines = 500 })
 		-- oil-capable, yazi-like file browser overlay
 		require("mini.files").setup({
 			init = function()
@@ -18,6 +16,9 @@ return {
 		require("mini.splitjoin").setup()
 		-- ENTER to jump by chars to position hints (noice)
 		require("mini.jump2d").setup()
+		require("mini.diff").setup({
+			source = require("mini.diff").gen_source.none(),
+		})
 		-- require("mini.notify").setup()
 		-- color scheme editor :lua require('mini.colors').interactive()
 		-- kinda meh, does not work too well editing external themes

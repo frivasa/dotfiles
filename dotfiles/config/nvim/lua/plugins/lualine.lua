@@ -40,7 +40,8 @@ return { -- bottom bar config
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = "gruvbox-material", -- Set theme based on environment variable
+				-- theme = "gruvbox-material", -- Set theme based on environment variable
+				-- comment to inherit colorscheme from vim
 				-- Some useful glyphs:
 				-- https://www.nerdfonts.com/cheat-sheet
 				--        

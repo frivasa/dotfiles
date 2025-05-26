@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	-- require("plugins.neotree"), -- folder browser
-	require("plugins.colortheme"), -- font colors
+	--require("plugins.colortheme"), -- font colors
+	require("plugins.colorscheme-pywal"),
 	require("plugins.bufferline"), -- top bar configuration ("show tabs")
 	require("plugins.lualine"), -- bottom bar config/colors
 	require("plugins.treesitter"), -- reference finding ("open file with var/function")
@@ -27,7 +28,8 @@ require("lazy").setup({
 	require("plugins.indent-lines"), -- indent markings along loops
 	require("plugins.pyrepl"), -- tested: iron, pyrola. This one is simple and works
 	require("plugins.dap"), -- debugger
-	require("plugins.codecompanion"), -- ai features
+	-- require("plugins.ai-avante"), -- ai features
+	require("plugins.ai-codecompanion"), -- ai features
 	require("plugins.ufo-folding"), -- code folding
 	require("plugins.vim-tmux-navigator"), -- code folding
 	require("plugins.snacks"), -- group of QoL plugins

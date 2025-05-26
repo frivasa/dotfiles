@@ -1,6 +1,5 @@
 return {
 	"olimorris/codecompanion.nvim",
-	opts = {},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
@@ -8,6 +7,7 @@ return {
 	config = function()
 		require("codecompanion").setup({
 			adapters = {
+				opts = { show_model_choices = true },
 				ollama = function()
 					return require("codecompanion.adapters").extend("openai_compatible", {
 						env = {

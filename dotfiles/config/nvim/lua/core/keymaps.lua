@@ -1,95 +1,112 @@
--- Set leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
--- Disable the spacebar key's default behavior in Normal and Visual modes
-vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear Search Highlights" })
--- this might not work on tmux
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-vim.keymap.set("n", "-", ":lua MiniFiles.open()<CR>", { desc = "Open mini.file navigator (Oil)" })
--- For conciseness
+local wk = require("which-key")
+local icons = require("mini.icons")
 local opts = { noremap = true, silent = true }
--- save file
-vim.keymap.set("n", "<C-s>", "<cmd> w <CR>", opts)
--- save file without auto-formatting
-vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w <CR>", opts)
--- quit file
-vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
--- delete single character without copying into register
-vim.keymap.set("n", "x", '"_x', opts)
--- Vertical scroll and center
-vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
-vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
--- Find and center
-vim.keymap.set("n", "n", "nzzzv", opts)
-vim.keymap.set("n", "N", "Nzzzv", opts)
--- Resize with arrows
-vim.keymap.set("n", "<Up>", ":resize -2<CR>", opts)
-vim.keymap.set("n", "<Down>", ":resize +2<CR>", opts)
-vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>", opts)
-vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", opts)
--- Buffers
-vim.keymap.set("n", "<Tab>", ":bnext<CR>", opts)
-vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", opts)
-vim.keymap.set("n", "<leader>x", ":bdelete!<CR>", opts) -- close buffer
-vim.keymap.set("n", "<leader>b", "<cmd> enew <CR>", opts) -- new buffer
--- Window management
-vim.keymap.set("n", "<leader>v", "<C-w>v", opts) -- split window vertically
-vim.keymap.set("n", "<leader>h", "<C-w>s", opts) -- split window horizontally
-vim.keymap.set("n", "<leader>se", "<C-w>=", opts) -- make split windows equal width & height
-vim.keymap.set("n", "<leader>xs", ":close<CR>", opts) -- close current split window
--- Navigate between splits
-vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { desc = "Move focus up" })
-vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", { desc = "Move focus down" })
-vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { desc = "Move focus left" })
-vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { desc = "Move focus right" })
--- Tabs
-vim.keymap.set("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
-vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
-vim.keymap.set("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
-vim.keymap.set("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
--- Toggle line wrapping
-vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", opts)
--- Stay in indent mode
-vim.keymap.set("v", "<", "<gv", opts)
-vim.keymap.set("v", ">", ">gv", opts)
--- Keep last yanked when pasting
-vim.keymap.set("v", "p", '"_dP', opts)
--- Diagnostic keymaps
--- vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+local nor = { mode = "n", opts }
+local vis = { mode = "v", opts }
+-- noremap = nor+vis+select+operator (allows "repeatability")
+-- Aux Functions
+local function new_terminal(lang)
+	vim.cmd("vsplit term://" .. lang)
+end
 
--- CodeCompanion keymaps
-vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
-vim.keymap.set({ "n", "v" }, "<LocalLeader>a", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
-vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
--- Expand 'cc' into 'CodeCompanion' in the command line
-vim.cmd([[cab cc CodeCompanion]])
+local function new_terminal_python()
+	new_terminal("python")
+end
 
--- REPL keymaps
--- vim.keymap.set({ "n", "i" }, "<m-i>", "<esc>i```{python}<cr>```<esc>O", { desc = "[i]nsert code chunk" })
-vim.keymap.set({ "n" }, "<leader>ci", ":vsplit  term://ipython<cr>", { desc = "[c]ode repl [i]python" })
--- pyrepl keymaps
--- vim.keymap.set("n", [your keymap], function() require('nvim-python-repl').send_statement_definition() end, { desc = "Send semantic unit to REPL"})
-vim.keymap.set("v", "<leader>sv", function()
-	require("nvim-python-repl").send_visual_to_repl()
-end, { desc = "Send visual selection to REPL" })
--- vim.keymap.set("n", [your keyamp], function() require('nvim-python-repl').send_buffer_to_repl() end, { desc = "Send entire buffer to REPL"})
--- vim.keymap.set("n", [your keymap], function() require('nvim-python-repl').toggle_execute() end, { desc = "Automatically execute command in REPL after sent"})
-vim.keymap.set("n", "<leader>ors", function()
-	require("nvim-python-repl").toggle_vertical()
-end, { desc = "Create REPL in vertical or horizontal split" })
-vim.keymap.set("n", "<leader>orv", function()
-	require("nvim-python-repl").open_repl()
-end, { desc = "Opens the REPL in a window split" })
--- vim.keymap.set("n", "<Leader>mc", MiniMap.close)
--- vim.keymap.set("n", "<Leader>mf", MiniMap.toggle_focus)
--- vim.keymap.set("n", "<Leader>mo", MiniMap.open)
--- vim.keymap.set("n", "<Leader>mr", MiniMap.refresh)
--- vim.keymap.set("n", "<Leader>ms", MiniMap.toggle_side)
--- vim.keymap.set("n", "<Leader>mt", MiniMap.toggle)
--- slap your wrist
--- vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
+local slime_send_region_cmd = ":<C-u>call slime#send_op(visualmode(), 1)<CR>"
+slime_send_region_cmd = vim.api.nvim_replace_termcodes(slime_send_region_cmd, true, false, true)
+local function send_region()
+	-- if filetyps is not quarto, just send_region
+	if vim.bo.filetype ~= "quarto" or vim.b["quarto_is_r_mode"] == nil then
+		vim.cmd("normal" .. slime_send_region_cmd)
+		return
+	end
+	if vim.b["quarto_is_r_mode"] == true then
+		vim.g.slime_python_ipython = 0
+		local is_python = require("otter.tools.functions").is_otter_language_context("python")
+		if is_python and not vim.b["reticulate_running"] then
+			vim.fn["slime#send"]("reticulate::repl_python()" .. "\r")
+			vim.b["reticulate_running"] = true
+		end
+		if not is_python and vim.b["reticulate_running"] then
+			vim.fn["slime#send"]("exit" .. "\r")
+			vim.b["reticulate_running"] = false
+		end
+		vim.cmd("normal" .. slime_send_region_cmd)
+	end
+end
+
+-- command is really picky, put it close to the function so that it works
+wk.add({
+	{ "<CR>", send_region, desc = "Run Code Region", mode = "v" },
+})
+
+-- "local" keymaps
+wk.add({
+	{ "<C-h>", "<CMD>wincmd h<CR>", desc = "Move Left", nor },
+	{ "<C-j>", "<CMD>wincmd j<CR>", desc = "Move Down", nor },
+	{ "<C-k>", "<CMD>wincmd k<CR>", desc = "Move Up", nor },
+	{ "<C-l>", "<CMD>wincmd l<CR>", desc = "Move Right", nor },
+	{ "<C-q>", "<CMD>q<CR>", desc = "Quit File", nor },
+	{ "<C-s>", "<CMD>w<CR>", desc = "Save File", nor },
+	{ "<S-Tab>", "<CMD>bprevious<CR>", desc = "Prev Buffer", nor },
+	{ "<Tab>", "<CMD>bnext<CR>", desc = "Next Buffer", nor },
+	{ "<ESC>", "<CMD>nohlsearch<CR>", desc = "Clear Search Highlights", nor },
+	{ "x", '"_x', desc = "Delete without copying", nor },
+	{ "n", "nzzzv", desc = "center word search", nor },
+	{ "N", "Nzzzv", desc = "center backwards word search", nor },
+	{ "<C-d>", "<C-d>zz", desc = "scroll down and center", nor },
+	{ "<C-u>", "<C-u>zz", desc = "scroll up and center", nor },
+	{ "<C-LeftMouse>", "<CMD>lua vim.lsp.buf.definition()<CR>", desc = "Go to Definition", nor },
+	{ "<", "<gv", desc = "indent repeatedly leftward", nor },
+	{ ">", ">gv", desc = "indent repeatedly righward", nor },
+	{ "<Up>", ":resize -2<CR>", desc = "nudge pane upwards", nor },
+	{ "<Down>", ":resize +2<CR>", desc = "nudge pane downwards", nor },
+	{ "<Left>", ":vertical resize -2<CR>", desc = "nudge pane leftwards", nor },
+	{ "<Right>", ":vertical resize +2<CR>", desc = "nudge pane rightwards", nor },
+})
+
+wk.add({
+	{ "<Space>", "<NOP>", mode = { "n", "v" }, opts },
+	{ "<leader>h", group = "Help", icon = { icon = "󰰀 ", color = "purple" } },
+	{ "<leader>a", group = "Bots", icon = { icon = " ", color = "purple" } },
+	{ "<C-a>", "<CMD>CodeCompanionActions<CR>", desc = "CodeCompanion Actions", mode = { "n", "v" }, opts },
+	{ "<leader>aa", "<CMD>CodeCompanionChat Add<CR>", desc = "Add Chat Input", vis },
+	{ "<leader>i", group = "Insert", icon = { icon = "󰰃 ", color = "purple" } },
+	{ "<leader>iz", "<CMD>Telescope spell_suggest<CR>", desc = "Spell Suggestions", nor },
+	{ "<leader>is", group = "Snippets", icon = { icon = "󰅩 ", color = "yellow" } },
+	{ "<leader>isl", "<ESC>i```{lua}<cr>```<ESC>O", desc = "Lua", nor },
+	{ "<leader>isp", "<ESC>i```{python}<cr>```<ESC>O", desc = "Python", nor },
+	{ "<leader>isr", "<ESC>i```{r}<cr>```<ESC>O", desc = "R", nor },
+	{ "<leader>d", group = "Debug", icon = { icon = "󰨰 ", color = "purple" } },
+	{ "<leader>dqq", vim.diagnostic.setloclist, desc = "Diagnostics List", nor },
+	{ "<leader>dqf", vim.diagnostic.open_float, desc = "Diagnostics List (float)", nor },
+	{ "<leader>q", group = "Quarto", icon = { icon = "󱡓 ", color = "purple" } },
+	{ "<leader>qp", "<CMD>QuartoPreview<CR>", desc = "Preview", nor },
+	{ "<leader>qa", "<CMD>QuartoSendAbove<CR>", desc = "Run Above", nor },
+	{ "<leader>qc", "<CMD>QuartoSend<CR>", desc = "Run Cell", nor },
+	{ "<leader>qe", require("otter").export, desc = "[E]xport code to file", nor },
+	{ "<leader>g", group = "Guardar", icon = { icon = " ", color = "purple" } },
+	{ "<leader>gn", "<CMD>noautocmd w<CR>", desc = "Save w/o Formatting", nor },
+	{ "<leader>r", group = "Run", icon = { icon = " ", color = "purple" } },
+	{ "<leader>s", group = "Search (Telescope)", icon = { icon = " ", color = "purple" } },
+	{ "<leader>m", group = "Mvmt", icon = { icon = "󰜎 ", color = "purple" } },
+	{ "<leader>mn", "<CMD>tabn<CR>", desc = "Next Tab", nor },
+	{ "<leader>mp", "<CMD>tabp<CR>", desc = "Prev Tab", nor },
+	{ "<leader>o", group = "Open/Splits", icon = { icon = "󰠜 ", color = "purple" } },
+	{ "<leader>ob", "<CMD>enew<CR>", desc = "New Scratch Buffer", nor },
+	{ "<leader>ot", "<CMD>tabnew<CR>", desc = "New Tab", nor },
+	{ "<leader>ov", "<C-w>v", desc = "Vertical Split", nor },
+	{ "<leader>oh", "<C-w>s", desc = "Horizontal Split", nor },
+	{ "<leader>op", new_terminal_python, desc = "new [p]ython terminal", nor },
+	{ "<leader>of", ":lua MiniFiles.open()<CR>", desc = "File Browser (MiniFiles)", nor },
+	{ "<leader>x", group = "Close", icon = { icon = "󰰰 ", color = "purple" } },
+	{ "<leader>xt", "<CMD>tabclose<CR>", desc = "Close Tab", nor },
+	{ "<leader>xx", "<CMD>bdelete!<CR>", desc = "Close Buffer", nor },
+	{ "<leader>xs", "<CMD>close<CR>", desc = "Close Split", nor },
+	{ "<leader>t", group = "Toggles", icon = { icon = "󰨚 ", color = "purple" } },
+	{ "<leader>tc", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat", mode = { "n", "v" }, opts },
+	{ "<leader>te", "<C-w>=", desc = "Equalize Splits", nor },
+	{ "<leader>tw", "<CMD>set wrap!<CR>", desc = "Toggle Wrap", nor },
+	{ "<leader>tz", "<CMD>setlocal spell!<CR>", desc = "Toggle Spellcheck", nor },
+})

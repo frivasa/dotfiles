@@ -80,7 +80,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/run/media/fdo/Burbidge/90.Leisure/misc.video.stream/alonso_2025.jpg"
+                "file": "/run/media/fdo/Burbidge/90.Leisure/31.obsStream/f62329624.jpg"
             },
             "mixers": 0,
             "sync": 0,
@@ -146,7 +146,7 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "local_file": "/run/media/fdo/Burbidge/90.Leisure/misc.video.stream/1655729368-1655729368-hd-teal-glass-waves-live-wallpaper-&-screensaver.mp4",
+                "local_file": "/run/media/fdo/Burbidge/90.Leisure/31.obsStream/background_01.mp4",
                 "looping": true
             },
             "mixers": 255,
@@ -245,7 +245,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "f31148e4-1034-4e23-a38b-8163018e692e"
+                "RestoreToken": "7b6f4f35-86db-4f69-8143-721167ae1e18",
+                "ShowCursor": false
             },
             "mixers": 0,
             "sync": 0,
@@ -442,20 +443,20 @@
                         "id": 7,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1141.0,
-                            "y": 628.0
+                            "x": 1048.0,
+                            "y": 660.0
                         },
                         "pos_rel": {
-                            "x": 0.3351851999759674,
-                            "y": 0.1629629135131836
+                            "x": 0.16296295821666718,
+                            "y": 0.2222222089767456
                         },
                         "scale": {
-                            "x": 0.8494364023208618,
-                            "y": 0.8497853875160217
+                            "x": 1.9826388359069824,
+                            "y": 1.9814814329147339
                         },
                         "scale_rel": {
-                            "x": 0.8494364023208618,
-                            "y": 0.8497853875160217
+                            "x": 1.9826388359069824,
+                            "y": 1.9814814329147339
                         },
                         "bounds": {
                             "x": 0.0,
@@ -497,12 +498,12 @@
                         "id": 3,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 345.0,
-                            "y": 625.0
+                            "x": 199.0,
+                            "y": 649.0
                         },
                         "pos_rel": {
-                            "x": -1.1388888359069824,
-                            "y": 0.15740740299224854
+                            "x": -1.4092592000961304,
+                            "y": 0.20185184478759766
                         },
                         "scale": {
                             "x": 1.1753246784210205,
@@ -552,12 +553,12 @@
                         "id": 5,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 351.0,
-                            "y": 901.0
+                            "x": 265.0,
+                            "y": 804.5
                         },
                         "pos_rel": {
-                            "x": -1.1277778148651123,
-                            "y": 0.6685185432434082
+                            "x": -1.2870370149612427,
+                            "y": 0.48981475830078125
                         },
                         "scale": {
                             "x": 0.27478447556495667,
@@ -1111,7 +1112,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "39d98507-4c93-4a31-ac4f-2d56633c126d"
+                "RestoreToken": "00c44ffd-74a4-4a63-bae3-7dc1b569e419",
+                "ShowCursor": false
             },
             "mixers": 0,
             "sync": 0,
@@ -1211,7 +1213,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "ecaf5b82-3942-4d9b-b91c-2d93065b3853"
+                "RestoreToken": "cc7a2f97-f73e-499c-9761-85587e53862e",
+                "ShowCursor": false
             },
             "mixers": 0,
             "sync": 0,
@@ -1242,9 +1245,9 @@
                         "shape_feather_type": 1,
                         "shape_frame_check": false,
                         "shape_center_x": 590.0,
-                        "shape_center_y": 199.0,
-                        "rectangle_width": 581.0,
-                        "rectangle_height": 325.0,
+                        "shape_center_y": 236.0,
+                        "rectangle_width": 626.0,
+                        "rectangle_height": 249.0,
                         "position_x": 527,
                         "position_y": 212.5,
                         "mask_gradient_position": 527
@@ -1275,7 +1278,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/home/fdo/Downloads/Imola 2025 Expected Strategies.png"
+                "file": "/home/fdo/Downloads/2025 Spain Expected Strategies.png"
             },
             "mixers": 0,
             "sync": 0,
@@ -1304,10 +1307,10 @@
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
                         "rectangle_corner_radius": 20.0,
-                        "shape_center_x": 598.0,
-                        "shape_center_y": 294.0,
-                        "rectangle_width": 603.0,
-                        "rectangle_height": 429.0,
+                        "shape_center_x": 273.0,
+                        "shape_center_y": 111.0,
+                        "rectangle_width": 316.0,
+                        "rectangle_height": 166.0,
                         "position_x": 621.0,
                         "position_y": 349.5,
                         "mask_gradient_position": 621.0
@@ -1357,7 +1360,14 @@
         }
     ],
     "transitions": [],
-    "saved_projectors": [],
+    "saved_projectors": [
+        {
+            "monitor": -1,
+            "type": 2,
+            "geometry": "AdnQywADAAAAAAQ4AAAB4AAADjUAAAdhAAAEOAAAAeAAAA41AAAHYQAAAAEAAAAACgAAAAQ4AAAB4AAADjUAAAdh",
+            "alwaysOnTopOverridden": false
+        }
+    ],
     "current_transition": "Fade",
     "transition_duration": 300,
     "preview_locked": false,

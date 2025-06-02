@@ -14,6 +14,7 @@ return { -- Highlight, edit, and navigate code
 			"html",
 			"lua",
 			"luadoc",
+			"latex",
 			"r",
 			"gitignore",
 			"html",

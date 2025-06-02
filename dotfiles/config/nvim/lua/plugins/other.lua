@@ -5,25 +5,51 @@ return {
 	},
 	{ -- keybind hints
 		"folke/which-key.nvim",
-	},
-	{ -- notifications
-		"folke/noice.nvim",
+		event = "VeryLazy",
 		opts = {
-			routes = {
-				{
-					filter = {
-						event = "lsp",
-						kind = "progress",
-						-- cond = function(message)
-						-- 	local client = vim.tbl_get(message.opts, "progress", "client")
-						-- 	return client == "pyright"
-						-- end,
-					},
-					-- opts = { skip = true },
-				},
+			preset = "modern",
+			icons = {
+				colors = true,
+				group = "",
+				separator = "",
+				rules = false,
+			},
+		},
+		keys = {
+			{
+				"<leader>hl",
+				function()
+					require("which-key").show({ global = false, loop = true })
+				end,
+				desc = "Buffer Local Keymaps (which-key)",
+			},
+			{
+				"<leader>hg",
+				function()
+					require("which-key").show({ global = true, loop = true })
+				end,
+				desc = "Buffer Local Keymaps (which-key)",
 			},
 		},
 	},
+	-- { -- notifications
+	-- 	"folke/noice.nvim",
+	-- 	opts = {
+	-- 		routes = {
+	-- 			{
+	-- 				filter = {
+	-- 					event = "lsp",
+	-- 					kind = "progress",
+	-- 					-- cond = function(message)
+	-- 					-- 	local client = vim.tbl_get(message.opts, "progress", "client")
+	-- 					-- 	return client == "pyright"
+	-- 					-- end,
+	-- 				},
+	-- 				-- opts = { skip = true },
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
 	{ -- autoclose brackets
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",

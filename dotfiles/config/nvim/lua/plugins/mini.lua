@@ -14,29 +14,13 @@ return {
 		-- require("mini.snippets").setup()
 		-- gS to split/join argument groups into one-per-line or all in a single one
 		require("mini.splitjoin").setup()
-		-- ENTER to jump by chars to position hints (noice)
-		require("mini.jump2d").setup()
-		require("mini.diff").setup({
-			source = require("mini.diff").gen_source.none(),
+		require("mini.notify").setup()
+		-- <leader>ENTER to jump by chars to position hints (noice)
+		require("mini.jump2d").setup({
+			mappings = { start_jumping = "g<CR>" },
 		})
-		-- require("mini.notify").setup()
-		-- color scheme editor :lua require('mini.colors').interactive()
-		-- kinda meh, does not work too well editing external themes
-		-- require("mini.colors").setup()
-		-- does not work? no :Mini* functions
-		-- require("mini.map").setup()
-		-- setup colors by hues
-		-- require("mini.hues").setup({
-		-- 	background = "#000000",
-		-- 	foreground = "#afd7d7",
-		-- 	n_hues = 3,
-		-- 	saturation = "lowmedium",
-		-- 	accent = "blue",
-		-- })
-		-- quick and simple 2 color theme, can specify all 16-colors
-		-- require("mini.base16").setup({
-		-- 	palette = require("mini.base16").mini_palette("#000000", "#afd7d7", 50),
-		--     palette = { base00 = "#afd7d7", base01 = ..., base0F= "000000"}
+		-- require("mini.diff").setup({
+		-- 	source = require("mini.diff").gen_source.none(),
 		-- })
 		-- might use in the future: these allow saving sessions and
 		-- previously visited files/buffers

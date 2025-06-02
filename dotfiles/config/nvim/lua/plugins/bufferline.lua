@@ -23,14 +23,14 @@ return {
 				diagnostics = false,
 				diagnostics_update_in_insert = false,
 				color_icons = false,
-				show_buffer_icons = true,
+				show_buffer_icons = false,
 				show_buffer_close_icons = true,
 				show_close_icon = true,
 				persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-				separator_style = { "", "" }, -- | "thick" | "thin" | { 'any', 'any' },
-				enforce_regular_tabs = true,
+				separator_style = { "", "" }, -- { "", "" }, -- | "thick" | "thin" | { 'any', 'any' },
+				enforce_regular_tabs = false,
 				always_show_bufferline = true,
-				show_tab_indicators = false,
+				show_tab_indicators = true,
 				indicator = {
 					-- icon = '▎', -- this should be omitted if indicator style is not 'icon'
 					style = "none", -- Options: 'icon', 'underline', 'none'
@@ -42,18 +42,16 @@ return {
 				sort_by = "insert_at_end",
 			},
 			highlights = {
-				-- separator = {
-				-- 	fg = "Color00",
-				-- },
+				separator = {},
 				buffer_selected = {
 					bold = true,
 					italic = false,
 				},
-				-- separator_selected = {},
-				-- tab_selected = {},
-				-- background = {},
-				-- indicator_selected = {},
-				-- fill = {},
+				separator_selected = {},
+				tab_selected = {},
+				background = {},
+				indicator_selected = {},
+				fill = {},
 			},
 		})
 	end,

@@ -1,13 +1,6 @@
 # removes previous query, downloads a new image json
 # changes it in fastfetch config
 # returns to original folder where this was called
-# Options are:
-# - [sfw]
-# - waifu neko shinobu megumin bully cuddle cry hug awoo kiss
-# - lick pat smug bonk yeet blush smile wave highfive handhold
-# - nom bite glomp slap kill happy wink poke dance cringe
-# - [nsfw]
-# - waifu neko trap blowjob
 retfolder=$(pwd)
 tarfolder=~/.config/fastfetch
 cd "$tarfolder"

@@ -2,17 +2,21 @@
 HistoryEnabled=false
 LastUsedVersion=210800
 ShowHiddenFiles=true
+SideBarPage=operations
 
 [ImageView]
 EnlargeSmallerImages=true
 MouseWheelBehavior=MouseWheelBehavior::Browse
+ThumbnailSplitterSizes=634,181
 ZoomMode=ZoomMode::KeepSame
 
 [MainWindow]
 MenuBar=Disabled
 
 [SideBar]
-InformationSplitterSizes=211,244
+InformationSplitterSizes=220,255
+IsVisible ViewMode=true
+SideBarSplitterSizes=210,763
 
 [ThumbnailView]
 ListVideos=false

@@ -69,7 +69,8 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 
-alias runwebui="sudo systemctl start docker && sudo docker start -i -a open-webui"
+alias runwebui="sudo systemctl start docker && sudo docker start -i -a open-webui-ollama"
+alias weather="curl v2d.wttr.in"
 
 export OLLAMA_MODELS=/home/fdo/.ollama/models
 export OLLAMA_HOST=127.0.0.1:8090
@@ -104,6 +105,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-
-
+# fastfetch
+# curl "wttr.in/Santiago,Chile?format=%l:+%C+%t(humidity:%h)(precip:%p+mm/3h)+%m+(%M)\n+(Rise/Zenith/Set)+%S+%z+%s\n"
 

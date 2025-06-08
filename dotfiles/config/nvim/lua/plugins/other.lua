@@ -1,8 +1,5 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
-	{ -- surround text with keys/brackets
-		"tpope/vim-surround",
-	},
 	{ -- keybind hints
 		"folke/which-key.nvim",
 		event = "VeryLazy",

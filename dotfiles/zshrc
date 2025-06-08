@@ -28,7 +28,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # vi-mode settings
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-VI_MODE_SET_CURSOR=false
+VI_MODE_SET_CURSOR=true
 # timer settings
 TIMER_PRECISION=1
 TIMER_FORMAT='\n[%d]'
@@ -41,7 +41,9 @@ plugins=( git vi-mode timer pixi-env )
 source $ZSH/oh-my-zsh.sh
 INSERT_MODE_INDICATOR="%{$fg[yellow]%} 󰫶 %{$reset_color%}"
 MODE_INDICATOR="%{$fg[blue]%} 󰫻 %{$reset_color%}"
-PROMPT="$PROMPT\$(vi_mode_prompt_info) "
+# dont use symbols for vi-mode, the cursor changes | to block
+# and makes it easier to copy previous commands
+# PROMPT="$PROMPT\$(vi_mode_prompt_info) "
 RPROMPT=""
 
 # export LANG=en_US.UTF-8

@@ -7,14 +7,11 @@ return {
 				--skip
 			end,
 		})
-		-- gx to swap selections (useful for swapping arguments)
-		-- single fucntionality so not used for now
-		-- require("mini.operators").setup()
-		-- create custom tab-fillable snippets
-		-- require("mini.snippets").setup()
 		-- gS to split/join argument groups into one-per-line or all in a single one
 		require("mini.splitjoin").setup()
-		require("mini.notify").setup()
+		require("mini.ai").setup()
+		require("mini.surround").setup()
+		-- require("mini.notify").setup()
 		-- <leader>ENTER to jump by chars to position hints (noice)
 		require("mini.jump2d").setup({
 			mappings = { start_jumping = "g<CR>" },

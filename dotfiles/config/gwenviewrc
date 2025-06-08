@@ -3,6 +3,7 @@ HistoryEnabled=false
 LastUsedVersion=210800
 ShowHiddenFiles=true
 SideBarPage=operations
+UrlNavigatorIsEditable=true
 
 [ImageView]
 EnlargeSmallerImages=true
@@ -15,8 +16,7 @@ MenuBar=Disabled
 
 [SideBar]
 InformationSplitterSizes=220,255
-IsVisible ViewMode=true
-SideBarSplitterSizes=210,763
+SideBarSplitterSizes=210,1065
 
 [ThumbnailView]
 ListVideos=false

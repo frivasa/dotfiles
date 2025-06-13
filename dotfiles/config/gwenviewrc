@@ -1,3 +1,6 @@
+[Crop]
+CropAdvancedSettingsEnabled=true
+
 [General]
 HistoryEnabled=false
 LastUsedVersion=210800
@@ -16,7 +19,7 @@ MenuBar=Disabled
 
 [SideBar]
 InformationSplitterSizes=220,255
-SideBarSplitterSizes=210,1065
+SideBarSplitterSizes=210,610
 
 [ThumbnailView]
 ListVideos=false

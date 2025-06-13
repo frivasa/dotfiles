@@ -55,13 +55,9 @@ zstyle ':completion:*' special-dirs true # force . and .. to show in cmp menu
 
 # For a full list of active aliases, run `alias`.
 # maybe move to $ZSH_CUSTOM/aliases.zsh
-if (( $+commands[lxxxsd] )); then
-  alias ls='lsd --color=auto --hyperlink=auto --group-directories-first'
-else
-  alias l='ls -hAl --group-directories-first --color=auto'
-  alias ls='ls --color=auto --hyperlink=auto --group-directories-first'
-  alias ls_string='ls -mQ --color=auto --group-directories-first'
-fi
+alias l='ls -hAl --color=auto'
+alias ls='ls --color=auto --hyperlink=auto'
+alias ls_string='ls -mQ --color=auto --group-directories-first'
 alias job='ps -ef | grep frivas1'
 alias tail='tail -n 20'
 alias grep='grep --color=auto'

@@ -10,9 +10,9 @@
 import os
 
 home = os.environ["HOME"]
-foreground = 'foreground'
-background = 'background'
-border = 'color12'
+foreground = "foreground"  # same as cursor color for pywal
+background = "background"
+border = "color1"
 
 putty_dict = {
     "foreground": "Colour0",
@@ -44,41 +44,41 @@ ref_file = ".cache/wal/colors-kitty.conf"
 
 def get_theme_colors():
     cols = {}
-    with open(os.path.join(home, ref_file), 'r') as f:
+    with open(os.path.join(home, ref_file), "r") as f:
         for line in f:
             if foreground in line:
                 a = line.split()
-                cols['fg'] = a[1]
+                cols["fg"] = a[1]
             elif background in line:
                 a = line.split()
-                cols['bg'] = a[1]
+                cols["bg"] = a[1]
             elif border in line:
                 a = line.split()
-                cols['br'] = a[1]
+                cols["br"] = a[1]
     return cols
 
 
 def get_wal_edge_colors():
-    with open(os.path.join(home, rgb_file), 'r') as f:
+    with open(os.path.join(home, rgb_file), "r") as f:
         cols = {}
         for line in f:
             if active_color_pick in line:
                 a = line.split('"')
-                cols['active'] = a[3]
+                cols["active"] = a[3]
             elif inactive_color_pick in line:
                 a = line.split('"')
-                cols['inactive'] = a[3]
+                cols["inactive"] = a[3]
     return cols
 
 
-def edit_kwinrc_key(file_path, active='#000000', inactive='#999999'):
+def edit_kwinrc_key(file_path, active="#000000", inactive="#999999"):
     if not os.path.exists(file_path):
         print(f"File not found: {file_path}")
         return
-    with open(file_path, 'r') as f:
+    with open(file_path, "r") as f:
         otp = []
         for line in f:
-            key = line.split('=')[0]
+            key = line.split("=")[0]
             if key == "InactiveOutlineColor":
                 print("previous color:", line)
                 otp.append("InactiveOutlineColor={}\n".format(inactive))
@@ -89,7 +89,7 @@ def edit_kwinrc_key(file_path, active='#000000', inactive='#999999'):
                 print("new color:", active)
             else:
                 otp.append(line)
-    with open(file_path, 'w') as f:
+    with open(file_path, "w") as f:
         f.write("".join(otp))
 
 

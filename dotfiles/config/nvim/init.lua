@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 -- colorschemes are inherited from kitty via pywal
 require("lazy").setup({
 	require("plugins.colorscheme-pywal"), -- pywal colorscheme integration
-	require("plugins.bufferline"), -- top bar configuration ("show tabs")
 	require("plugins.lualine"), -- bottom bar config/colors
 	require("plugins.treesitter"), -- reference finding ("open file with var/function")
 	require("plugins.telescope"), -- file search and grep
@@ -27,6 +26,7 @@ require("lazy").setup({
 	require("plugins.dap"), -- debugger
 	require("plugins.ai-codecompanion"), -- ai features
 	require("plugins.quarto"), -- quarto document/webpage dev
+	require("plugins.bufferline"), -- top bar configuration ("show tabs")
 	require("plugins.snacks"), -- group of QoL plugins
 	-- image: show images/pdfs through kitty (nice)
 	-- bigfile: disable some plugins with large files

@@ -5,7 +5,8 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		require("bufferline").setup({
+		local bfline = require("bufferline")
+		bfline.setup({
 			options = {
 				mode = "buffers", -- set to "tabs" to only show tabpages instead
 				themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
@@ -19,7 +20,7 @@ return {
 				right_trunc_marker = "",
 				max_name_length = 30,
 				max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
-				tab_size = 21,
+				tab_size = 20,
 				diagnostics = false,
 				diagnostics_update_in_insert = false,
 				color_icons = false,
@@ -32,21 +33,22 @@ return {
 				always_show_bufferline = true,
 				show_tab_indicators = true,
 				indicator = {
-					-- icon = '▎', -- this should be omitted if indicator style is not 'icon'
-					style = "none", -- Options: 'icon', 'underline', 'none'
+					style = "icon", -- Options: 'icon', 'underline', 'none'
+					icon = "", -- this should be omitted if indicator style is not 'icon'
 				},
 				icon_pinned = "󰐃",
 				minimum_padding = 1,
 				maximum_padding = 5,
 				maximum_length = 15,
 				sort_by = "insert_at_end",
+				style_preset = bfline.style_preset.no_italic,
 			},
 			highlights = {
 				separator = {},
-				buffer_selected = {
-					bold = true,
-					italic = false,
-				},
+				-- buffer_selected = {
+				-- 	bold = true,
+				-- 	italic = false,
+				-- },
 				separator_selected = {},
 				tab_selected = {},
 				background = {},

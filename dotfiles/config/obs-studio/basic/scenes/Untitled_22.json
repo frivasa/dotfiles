@@ -245,8 +245,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "7b6f4f35-86db-4f69-8143-721167ae1e18",
-                "ShowCursor": false
+                "ShowCursor": false,
+                "RestoreToken": "7b6f4f35-86db-4f69-8143-721167ae1e18"
             },
             "mixers": 0,
             "sync": 0,
@@ -1112,8 +1112,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "00c44ffd-74a4-4a63-bae3-7dc1b569e419",
-                "ShowCursor": false
+                "ShowCursor": false,
+                "RestoreToken": "00c44ffd-74a4-4a63-bae3-7dc1b569e419"
             },
             "mixers": 0,
             "sync": 0,
@@ -1213,8 +1213,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "cc7a2f97-f73e-499c-9761-85587e53862e",
-                "ShowCursor": false
+                "ShowCursor": false,
+                "RestoreToken": "cc7a2f97-f73e-499c-9761-85587e53862e"
             },
             "mixers": 0,
             "sync": 0,
@@ -1360,14 +1360,7 @@
         }
     ],
     "transitions": [],
-    "saved_projectors": [
-        {
-            "monitor": -1,
-            "type": 2,
-            "geometry": "AdnQywADAAAAAAQ4AAAB4AAADjUAAAdhAAAEOAAAAeAAAA41AAAHYQAAAAEAAAAACgAAAAQ4AAAB4AAADjUAAAdh",
-            "alwaysOnTopOverridden": false
-        }
-    ],
+    "saved_projectors": [],
     "current_transition": "Fade",
     "transition_duration": 300,
     "preview_locked": false,

@@ -1,0 +1,6 @@
+[mode]
+normal_alt = { fg = "black", bg = "blue"}
+[status]
+overall = { fg = "lightred"}
+[status.LeftSection]
+size = { fg = "lightred"}

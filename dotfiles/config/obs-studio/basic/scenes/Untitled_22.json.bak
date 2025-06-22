@@ -80,7 +80,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/run/media/fdo/Burbidge/90.Leisure/31.obsStream/f62329624.jpg"
+                "file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/f62329624.jpg"
             },
             "mixers": 0,
             "sync": 0,
@@ -146,8 +146,8 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "local_file": "/run/media/fdo/Burbidge/90.Leisure/31.obsStream/background_01.mp4",
-                "looping": true
+                "looping": true,
+                "local_file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/background_03.mp4"
             },
             "mixers": 255,
             "sync": 0,
@@ -245,8 +245,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "7b6f4f35-86db-4f69-8143-721167ae1e18",
-                "ShowCursor": false
+                "ShowCursor": false,
+                "RestoreToken": "b169d7e7-ac15-4cbe-839a-60ef1547ad7c"
             },
             "mixers": 0,
             "sync": 0,
@@ -333,12 +333,12 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": -144.0,
+                            "y": -95.0
                         },
                         "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
+                            "x": -2.0444445610046387,
+                            "y": -1.1759259700775146
                         },
                         "scale": {
                             "x": 1.0,
@@ -349,12 +349,12 @@
                             "y": 1.7777777910232544
                         },
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 2093.0,
+                            "y": 1222.0
                         },
                         "bounds_rel": {
-                            "x": 3.555555582046509,
-                            "y": 2.0
+                            "x": 3.8759260177612305,
+                            "y": 2.262963056564331
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -498,20 +498,20 @@
                         "id": 3,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 199.0,
-                            "y": 649.0
+                            "x": 395.0,
+                            "y": 585.0
                         },
                         "pos_rel": {
-                            "x": -1.4092592000961304,
-                            "y": 0.20185184478759766
+                            "x": -1.046296238899231,
+                            "y": 0.08333337306976318
                         },
                         "scale": {
-                            "x": 1.1753246784210205,
-                            "y": 1.1760563850402832
+                            "x": 1.1178107261657715,
+                            "y": 1.1174004077911377
                         },
                         "scale_rel": {
-                            "x": 1.1753246784210205,
-                            "y": 1.1760563850402832
+                            "x": 1.1178107261657715,
+                            "y": 1.1174004077911377
                         },
                         "bounds": {
                             "x": 0.0,
@@ -536,7 +536,7 @@
                         "name": "Text (FreeType 2)",
                         "source_uuid": "d53d9a31-0a02-44ac-b730-180455700918",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -553,20 +553,20 @@
                         "id": 5,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 265.0,
-                            "y": 804.5
+                            "x": 320.0,
+                            "y": 846.0
                         },
                         "pos_rel": {
-                            "x": -1.2870370149612427,
-                            "y": 0.48981475830078125
+                            "x": -1.185185194015503,
+                            "y": 0.5666667222976685
                         },
                         "scale": {
-                            "x": 0.27478447556495667,
-                            "y": 0.2741020917892456
+                            "x": 0.519336998462677,
+                            "y": 0.518159806728363
                         },
                         "scale_rel": {
-                            "x": 0.27478447556495667,
-                            "y": 0.2741020917892456
+                            "x": 0.519336998462677,
+                            "y": 0.518159806728363
                         },
                         "bounds": {
                             "x": 0.0,
@@ -1112,8 +1112,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "00c44ffd-74a4-4a63-bae3-7dc1b569e419",
-                "ShowCursor": false
+                "ShowCursor": false,
+                "RestoreToken": "afcb0648-341a-48f0-badb-bb4ff0bb25c9"
             },
             "mixers": 0,
             "sync": 0,
@@ -1176,18 +1176,19 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
-                "text": "Alonso\n    33",
+                "text": "Alonso\n  33",
                 "font": {
-                    "face": "JetBrainsMono Nerd Font",
-                    "flags": 0,
-                    "size": 256,
-                    "style": "Regular"
+                    "face": "JetBrainsMono Nerd Font Mono",
+                    "style": "ExtraBold",
+                    "size": 200,
+                    "flags": 1
                 },
                 "word_wrap": false,
-                "outline": false,
+                "outline": true,
                 "drop_shadow": true,
-                "color1": 4285037059,
-                "color2": 4294967295
+                "color1": 4294967295,
+                "color2": 4285037059,
+                "antialiasing": true
             },
             "mixers": 0,
             "sync": 0,
@@ -1213,8 +1214,8 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "cc7a2f97-f73e-499c-9761-85587e53862e",
-                "ShowCursor": false
+                "ShowCursor": false,
+                "RestoreToken": "359b7be1-bce1-48ea-8a83-04869cc4cd94"
             },
             "mixers": 0,
             "sync": 0,
@@ -1244,10 +1245,10 @@
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
                         "shape_frame_check": false,
-                        "shape_center_x": 590.0,
-                        "shape_center_y": 236.0,
-                        "rectangle_width": 626.0,
-                        "rectangle_height": 249.0,
+                        "shape_center_x": 616.0,
+                        "shape_center_y": 264.0,
+                        "rectangle_width": 674.0,
+                        "rectangle_height": 341.0,
                         "position_x": 527,
                         "position_y": 212.5,
                         "mask_gradient_position": 527

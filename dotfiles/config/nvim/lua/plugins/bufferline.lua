@@ -5,6 +5,14 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
+		local function get_color(group, attr)
+			local hl = vim.api.nvim_get_hl(0, { name = group })
+			if hl[attr] then
+				return string.format("#%06x", hl[attr])
+			end
+			return nil
+		end
+
 		local bfline = require("bufferline")
 		bfline.setup({
 			options = {
@@ -29,12 +37,12 @@ return {
 				show_close_icon = true,
 				persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
 				separator_style = { "", "" }, -- { "", "" }, -- | "thick" | "thin" | { 'any', 'any' },
-				enforce_regular_tabs = false,
+				enforce_regular_tabs = true,
 				always_show_bufferline = true,
 				show_tab_indicators = true,
 				indicator = {
-					style = "icon", -- Options: 'icon', 'underline', 'none'
-					icon = "", -- this should be omitted if indicator style is not 'icon'
+					style = "none", -- Options: 'icon', 'underline', 'none'
+					-- icon = "", -- this should be omitted if indicator style is not 'icon'
 				},
 				icon_pinned = "󰐃",
 				minimum_padding = 1,
@@ -44,16 +52,19 @@ return {
 				style_preset = bfline.style_preset.no_italic,
 			},
 			highlights = {
-				separator = {},
-				-- buffer_selected = {
-				-- 	bold = true,
-				-- 	italic = false,
-				-- },
-				separator_selected = {},
-				tab_selected = {},
-				background = {},
-				indicator_selected = {},
-				fill = {},
+				fill = { fg = get_color("Normal", "fg"), bg = get_color("Normal", "bg") },
+				background = { fg = get_color("Visual", "bg"), bg = get_color("Normal", "bg") },
+				buffer_visible = { fg = get_color("Visual", "bg"), bg = get_color("Normal", "bg") },
+				close_button_visible = { fg = get_color("Visual", "bg"), bg = get_color("Normal", "bg") },
+				close_button = { fg = get_color("Visual", "bg"), bg = get_color("Normal", "bg") },
+				buffer_selected = { fg = get_color("String", "fg"), bg = get_color("Normal", "bg") },
+				close_button_selected = { fg = get_color("String", "fg"), bg = get_color("Normal", "bg") },
+				modified = { bg = get_color("Normal", "bg") },
+				tab = { fg = get_color("Visual", "bg"), bg = get_color("Normal", "bg") },
+				tab_selected = { fg = get_color("String", "fg"), bg = get_color("Normal", "bg") },
+				tab_close = { fg = get_color("Visual", "bg"), bg = get_color("Normal", "bg") },
+				indicator_selected = { fg = get_color("Normal", "fg"), bg = get_color("Normal", "bg") },
+				indicator_visible = { fg = get_color("Normal", "fg"), bg = get_color("Normal", "bg") },
 			},
 		})
 	end,

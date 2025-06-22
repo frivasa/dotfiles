@@ -69,9 +69,20 @@ wk.add({
 wk.add({
 	{ "<Space>", "<NOP>", mode = { "n", "v" }, opts },
 	{ "<leader>h", group = "Help", icon = { icon = "󰰀 ", color = "purple" } },
+	{ "<leader>hm", "<CMD>messages<CR>", desc = "Show Message History", nor },
 	{ "<leader>a", group = "Bots", icon = { icon = " ", color = "purple" } },
-	{ "<C-a>", "<CMD>CodeCompanionActions<CR>", desc = "CodeCompanion Actions", mode = { "n", "v" }, opts },
-	{ "<leader>aa", "<CMD>CodeCompanionChat Add<CR>", desc = "Add Chat Input", vis },
+	-- { "<C-a>", "<CMD>CodeCompanionActions<CR>", desc = "CodeCompanion Actions", mode = { "n", "v" }, opts },
+	-- { "<leader>aa", "<CMD>CodeCompanionChat Add<CR>", desc = "Add Chat Input", vis },
+	{ "<leader>r", group = "Replace", icon = { icon = "󰰞 ", color = "purple" } },
+	{
+		"<leader>rn",
+		function()
+			return ":IncRename " .. vim.fn.expand("<cword>")
+		end,
+		desc = "Rename word under cursor",
+		expr = true,
+		nor,
+	},
 	{ "<leader>i", group = "Insert", icon = { icon = "󰰃 ", color = "purple" } },
 	{ "<leader>iz", "<CMD>Telescope spell_suggest<CR>", desc = "Spell Suggestions", nor },
 	{ "<leader>is", group = "Snippets", icon = { icon = "󰅩 ", color = "yellow" } },
@@ -105,8 +116,9 @@ wk.add({
 	{ "<leader>xx", "<CMD>bdelete!<CR>", desc = "Close Buffer", nor },
 	{ "<leader>xs", "<CMD>close<CR>", desc = "Close Split", nor },
 	{ "<leader>t", group = "Toggles", icon = { icon = "󰨚 ", color = "purple" } },
-	{ "<leader>tc", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat", mode = { "n", "v" }, opts },
+	-- { "<leader>tc", "<CMD>CodeCompanionChat Toggle<CR>", desc = "Toggle Chat", mode = { "n", "v" }, opts },
 	{ "<leader>te", "<C-w>=", desc = "Equalize Splits", nor },
+	{ "<leader>tp", "<CMD>BufferLineTogglePin <CR>", desc = "Toggle Pinned", mode = { "n", "v" }, opts },
 	{ "<leader>tw", "<CMD>set wrap!<CR>", desc = "Toggle Wrap", nor },
 	{ "<leader>tz", "<CMD>setlocal spell!<CR>", desc = "Toggle Spellcheck", nor },
 })

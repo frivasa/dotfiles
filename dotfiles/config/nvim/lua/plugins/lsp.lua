@@ -70,8 +70,6 @@ return {
 		-- 		},
 		-- 	},
 		-- },
-
-		-- Allows extra capabilities provided by blink.cmp
 		"saghen/blink.cmp",
 	},
 	config = function()
@@ -256,7 +254,6 @@ return {
 		-- Enable the following language servers
 		--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 		--
-		--  Add any additional override configuration in the following tables. Available keys are:
 		--  - cmd (table): Override the default command used to start the server
 		--  - filetypes (table): Override the default list of associated filetypes for the server
 		--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
@@ -307,24 +304,25 @@ return {
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
-				-- capabilities = {},
-				settings = {
-					Lua = {
-						completion = {
-							callSnippet = "Replace",
-						},
-						runtime = { version = "LuaJIT" },
-						workspace = {
-							checkThirdParty = false,
-							library = {
-								"${3rd}/luv/library",
-								unpack(vim.api.nvim_get_runtime_file("", true)),
-							},
-						},
-						-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-						diagnostics = { disable = { "missing-fields" }, globals = { "vim" } },
+				capabilities = capabilities,
+				-- settings = {
+				Lua = {
+					completion = {
+						callSnippet = "Replace",
 					},
+					runtime = { version = "LuaJIT" },
+					workspace = {
+						checkThirdParty = false,
+						library = {
+							"${3rd}/luv/library",
+							unpack(vim.api.nvim_get_runtime_file("", true)),
+						},
+					},
+					-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+					diagnostics = { disable = { "missing-fields" }, globals = { "vim" } },
 				},
+				settings = { Lua = { diagnostics = { globals = "vim" } } },
+				-- },
 			},
 		}
 

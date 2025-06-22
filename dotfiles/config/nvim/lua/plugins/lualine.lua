@@ -52,7 +52,17 @@ return { -- bottom bar config
 			},
 			sections = {
 				lualine_a = { mode },
-				lualine_b = { "branch" },
+				lualine_b = {
+					"branch",
+					-- {
+					-- 	require("noice").api.status.command.get,
+					-- 	cond = require("noice").api.status.command.has,
+					-- },
+					{
+						require("noice").api.status.mode.get,
+						cond = require("noice").api.status.mode.has,
+					},
+				},
 				lualine_c = { "searchcount", "selectioncount", filename },
 				lualine_x = {
 					diagnostics,

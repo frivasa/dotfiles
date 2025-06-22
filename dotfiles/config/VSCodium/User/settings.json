@@ -21,7 +21,7 @@
   "accessibility.verbosity.terminal": false,
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
   "terminal.integrated.shellIntegration.history": 0,
-  "workbench.colorTheme": "Brave Contrast (rainglow)",
+  "workbench.colorTheme": "Wal Bordered",
   "debug.confirmOnExit": "always",
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "vim.leader": "<space>",

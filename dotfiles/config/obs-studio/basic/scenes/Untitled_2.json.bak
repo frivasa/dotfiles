@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "simple single monitor",
-    "current_program_scene": "simple single monitor",
+    "current_scene": "quad",
+    "current_program_scene": "quad",
     "scene_order": [
         {
             "name": "simple single monitor"
@@ -86,7 +86,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/run/media/fdo/Burbidge/90.Leisure/31.obsStream/f62329624.jpg"
+                "file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/f62329624.jpg"
             },
             "mixers": 0,
             "sync": 0,
@@ -235,8 +235,8 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "local_file": "/run/media/fdo/Burbidge/90.Leisure/31.obsStream/background_03.mp4",
-                "looping": true
+                "looping": true,
+                "local_file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/background_03.mp4"
             },
             "mixers": 255,
             "sync": 0,
@@ -674,7 +674,7 @@
                         "name": "tracker",
                         "source_uuid": "069a1620-53b1-4f24-977d-0d8c0a3dfbf7",
                         "visible": true,
-                        "locked": true,
+                        "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -691,20 +691,20 @@
                         "id": 13,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 308.0,
-                            "y": 616.0
+                            "x": 397.0,
+                            "y": 593.0
                         },
                         "pos_rel": {
-                            "x": -1.2074073553085327,
-                            "y": 0.1407407522201538
+                            "x": -1.0425926446914673,
+                            "y": 0.09814810752868652
                         },
                         "scale": {
-                            "x": 1.301484227180481,
-                            "y": 1.301204800605774
+                            "x": 1.1122448444366455,
+                            "y": 1.112765908241272
                         },
                         "scale_rel": {
-                            "x": 1.301484227180481,
-                            "y": 1.301204800605774
+                            "x": 1.1122448444366455,
+                            "y": 1.112765908241272
                         },
                         "bounds": {
                             "x": 0.0,
@@ -746,20 +746,20 @@
                         "id": 14,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1305.0,
-                            "y": 725.0
+                            "x": 1366.0,
+                            "y": 707.0
                         },
                         "pos_rel": {
-                            "x": 0.6388888955116272,
-                            "y": 0.34259259700775146
+                            "x": 0.7518518567085266,
+                            "y": 0.309259295463562
                         },
                         "scale": {
-                            "x": 2.7396693229675293,
-                            "y": 2.7394957542419434
+                            "x": 0.6022544503211975,
+                            "y": 0.6022889614105225
                         },
                         "scale_rel": {
-                            "x": 2.7396693229675293,
-                            "y": 2.7394957542419434
+                            "x": 0.6022544503211975,
+                            "y": 0.6022889614105225
                         },
                         "bounds": {
                             "x": 0.0,
@@ -995,7 +995,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "7b07c0ff-230c-42ec-b42a-ba0a06779528"
+                "RestoreToken": "0fc3e8ca-5b5c-4d31-b08c-b2793223cef4"
             },
             "mixers": 0,
             "sync": 0,
@@ -1024,9 +1024,9 @@
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
                         "rectangle_corner_radius": 20.0,
-                        "shape_center_x": 314.0,
+                        "shape_center_x": 316.0,
                         "shape_center_y": 358.0,
-                        "rectangle_width": 614.0,
+                        "rectangle_width": 616.0,
                         "rectangle_height": 715.0,
                         "mask_gradient_position": 539.0
                     },
@@ -1056,7 +1056,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "c1e0603b-eaca-4d0b-99c2-12b277a23d68"
+                "RestoreToken": "c9e2369f-d9f2-4c74-86dd-0e1875bb6037"
             },
             "mixers": 0,
             "sync": 0,
@@ -1119,7 +1119,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "2a430a17-ee43-4e6c-afd2-b9eed13e6d88"
+                "RestoreToken": "50f2c0c3-b081-4b4a-bd3b-c85df485b918"
             },
             "mixers": 0,
             "sync": 0,
@@ -1149,9 +1149,9 @@
                         "shape_feather_type": 1,
                         "rectangle_corner_radius": 20.0,
                         "shape_center_x": 601.0,
-                        "shape_center_y": 205.0,
-                        "rectangle_width": 594.0,
-                        "rectangle_height": 289.0,
+                        "shape_center_y": 263.0,
+                        "rectangle_width": 647.0,
+                        "rectangle_height": 329.0,
                         "position_x": 539.0,
                         "position_y": 213.5,
                         "mask_gradient_position": 539.0
@@ -1182,7 +1182,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/home/fdo/Screenshots/Screenshot_20250516_194926.png"
+                "file": "/home/fdo/Downloads/2025 Canada Expected Strategies.png"
             },
             "mixers": 0,
             "sync": 0,
@@ -1211,10 +1211,10 @@
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
                         "rectangle_corner_radius": 20.0,
-                        "shape_center_x": 121.0,
-                        "shape_center_y": 59.5,
-                        "rectangle_width": 201.0,
-                        "rectangle_height": 117.0,
+                        "shape_center_x": 552.0,
+                        "shape_center_y": 296.0,
+                        "rectangle_width": 714.0,
+                        "rectangle_height": 459.0,
                         "position_x": 121.0,
                         "position_y": 59.5,
                         "mask_gradient_position": 121.0
@@ -1290,7 +1290,14 @@
         }
     ],
     "transitions": [],
-    "saved_projectors": [],
+    "saved_projectors": [
+        {
+            "monitor": -1,
+            "type": 2,
+            "geometry": "AdnQywADAAAAAAQ4AAAB4AAADjUAAAdhAAAEOAAAAeAAAA41AAAHYQAAAAEAAAAACgAAAAQ4AAAB4AAADjUAAAdh",
+            "alwaysOnTopOverridden": false
+        }
+    ],
     "current_transition": "Fade",
     "transition_duration": 300,
     "preview_locked": false,

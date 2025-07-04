@@ -86,7 +86,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/f62329624.jpg"
+                "file": "/run/media/fdo/Shoemaker/41.Leisure/31.obsStream/f62329624.jpg"
             },
             "mixers": 0,
             "sync": 0,
@@ -235,8 +235,8 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "looping": true,
-                "local_file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/background_03.mp4"
+                "local_file": "/run/media/fdo/Shoemaker/41.Leisure/31.obsStream/background_03.mp4",
+                "looping": true
             },
             "mixers": 255,
             "sync": 0,
@@ -691,20 +691,20 @@
                         "id": 13,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 397.0,
-                            "y": 593.0
+                            "x": 381.0,
+                            "y": 642.0
                         },
                         "pos_rel": {
-                            "x": -1.0425926446914673,
-                            "y": 0.09814810752868652
+                            "x": -1.0722222328186035,
+                            "y": 0.18888890743255615
                         },
                         "scale": {
-                            "x": 1.1122448444366455,
-                            "y": 1.112765908241272
+                            "x": 1.0361781120300293,
+                            "y": 1.0355556011199951
                         },
                         "scale_rel": {
-                            "x": 1.1122448444366455,
-                            "y": 1.112765908241272
+                            "x": 1.0361781120300293,
+                            "y": 1.0355556011199951
                         },
                         "bounds": {
                             "x": 0.0,
@@ -746,20 +746,20 @@
                         "id": 14,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1366.0,
-                            "y": 707.0
+                            "x": 1084.0,
+                            "y": 662.0
                         },
                         "pos_rel": {
-                            "x": 0.7518518567085266,
-                            "y": 0.309259295463562
+                            "x": 0.22962963581085205,
+                            "y": 0.22592592239379883
                         },
                         "scale": {
-                            "x": 0.6022544503211975,
-                            "y": 0.6022889614105225
+                            "x": 0.5072916746139526,
+                            "y": 0.5074074268341064
                         },
                         "scale_rel": {
-                            "x": 0.6022544503211975,
-                            "y": 0.6022889614105225
+                            "x": 0.5072916746139526,
+                            "y": 0.5074074268341064
                         },
                         "bounds": {
                             "x": 0.0,
@@ -801,11 +801,11 @@
                         "id": 10,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 378.0,
+                            "x": 375.0,
                             "y": 890.0
                         },
                         "pos_rel": {
-                            "x": -1.0777777433395386,
+                            "x": -1.0833333730697632,
                             "y": 0.6481481790542603
                         },
                         "scale": {
@@ -995,7 +995,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "0fc3e8ca-5b5c-4d31-b08c-b2793223cef4"
+                "RestoreToken": "2f0cfa8b-e6ee-4826-8b8a-90ef11f0fbb7"
             },
             "mixers": 0,
             "sync": 0,
@@ -1056,7 +1056,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "c9e2369f-d9f2-4c74-86dd-0e1875bb6037"
+                "RestoreToken": "fa25e022-f8f7-4cc8-a2a7-948b7a9cc618"
             },
             "mixers": 0,
             "sync": 0,
@@ -1119,7 +1119,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "50f2c0c3-b081-4b4a-bd3b-c85df485b918"
+                "RestoreToken": "6ea6f367-6d7d-4ead-87c2-f87d7106ca01"
             },
             "mixers": 0,
             "sync": 0,
@@ -1149,9 +1149,9 @@
                         "shape_feather_type": 1,
                         "rectangle_corner_radius": 20.0,
                         "shape_center_x": 601.0,
-                        "shape_center_y": 263.0,
-                        "rectangle_width": 647.0,
-                        "rectangle_height": 329.0,
+                        "shape_center_y": 238.0,
+                        "rectangle_width": 592.0,
+                        "rectangle_height": 346.0,
                         "position_x": 539.0,
                         "position_y": 213.5,
                         "mask_gradient_position": 539.0
@@ -1182,7 +1182,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/home/fdo/Downloads/2025 Canada Expected Strategies.png"
+                "file": "/home/fdo/Downloads/strats.png"
             },
             "mixers": 0,
             "sync": 0,
@@ -1211,10 +1211,10 @@
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
                         "rectangle_corner_radius": 20.0,
-                        "shape_center_x": 552.0,
-                        "shape_center_y": 296.0,
-                        "rectangle_width": 714.0,
-                        "rectangle_height": 459.0,
+                        "shape_center_x": 1045.0,
+                        "shape_center_y": 455.0,
+                        "rectangle_width": 1078.0,
+                        "rectangle_height": 617.0,
                         "position_x": 121.0,
                         "position_y": 59.5,
                         "mask_gradient_position": 121.0

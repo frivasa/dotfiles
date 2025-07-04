@@ -2394,6 +2394,20 @@ sout-x264-tune=film
 # CBR encoding (boolean)
 #sout-vorbis-cbr=0
 
+[twolame] # Libtwolame audio encoder
+
+# Encoding quality (float)
+#sout-twolame-quality=0.000000
+
+# Stereo mode (integer)
+#sout-twolame-mode=0
+
+# VBR mode (boolean)
+#sout-twolame-vbr=0
+
+# Psycho-acoustic model (integer)
+#sout-twolame-psy=3
+
 [ttml] # TTML subtitles decoder
 
 # Subtitle justification (integer)
@@ -2551,6 +2565,26 @@ sout-x264-tune=film
 
 # Use DecodeBin (boolean)
 #use-decodebin=1
+
+[fluidsynth] # FluidSynth MIDI synthesizer
+
+# SoundFont file (string)
+#soundfont=
+
+# Chorus (boolean)
+#synth-chorus=1
+
+# Synthesis gain (float)
+#synth-gain=0.500000
+
+# Polyphony (integer)
+#synth-polyphony=256
+
+# Reverb (boolean)
+#synth-reverb=1
+
+# Sample rate (integer)
+#synth-sample-rate=44100
 
 [dvbsub] # DVB subtitles decoder
 
@@ -3064,6 +3098,38 @@ sout-x264-tune=film
 #  SRT Stream ID (string)
 #streamid=
 
+[access_output_shout] # IceCAST output
+
+# Stream name (string)
+#sout-shout-name=VLC media player - Live stream
+
+# Stream description (string)
+#sout-shout-description=Live stream from VLC media player
+
+# Stream MP3 (boolean)
+#sout-shout-mp3=0
+
+# Genre description (string)
+#sout-shout-genre=Alternative
+
+# URL description (string)
+#sout-shout-url=http://www.videolan.org/vlc
+
+# Bitrate (string)
+#sout-shout-bitrate=
+
+# Samplerate (string)
+#sout-shout-samplerate=
+
+# Number of channels (string)
+#sout-shout-channels=
+
+# Ogg Vorbis Quality (string)
+#sout-shout-quality=
+
+# Stream public (boolean)
+#sout-shout-public=0
+
 [access_output_rist] # RIST stream output
 
 # RIST target packet size (bytes) (integer)
@@ -3242,6 +3308,11 @@ sout-x264-tune=film
 
 # Do not check for a valid rtcp message from the encoder (boolean)
 #mcast-blind-nacks=0
+
+[nfs] # NFS input
+
+# Set NFS uid/guid automatically (boolean)
+#nfs-auto-guid=1
 
 [linsys_hdsdi] # HD-SDI Input
 
@@ -3648,7 +3719,7 @@ video-title-show=0
 #video-title-timeout=5000
 
 # Position of video title (integer)
-#video-title-position=8
+video-title-position=6
 
 # Hide cursor and fullscreen controller after x milliseconds (integer)
 #mouse-hide-timeout=1000
@@ -3984,7 +4055,7 @@ access=any
 #mux=
 
 # Access output module (string)
-#access_output=
+access_output=any
 
 # Hop limit (TTL) (integer)
 #ttl=-1
@@ -4038,7 +4109,7 @@ loop=1
 #start-paused=0
 
 # Auto start (boolean)
-playlist-autostart=1
+#playlist-autostart=1
 
 # Pause on audio communication (boolean)
 #playlist-cork=1
@@ -4059,7 +4130,7 @@ one-instance-when-started-from-file=0
 #media-library=0
 
 # Display playlist tree (boolean)
-#playlist-tree=0
+playlist-tree=1
 
 # Default stream (string)
 #open=

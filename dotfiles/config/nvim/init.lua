@@ -23,9 +23,10 @@ require("lazy").setup({
 	require("plugins.greeter"), -- add ascii poster and recent files on startup
 	require("plugins.lsp"), -- language-specific hints and structures
 	require("plugins.autocompletion"), -- lsp companion, fills in if-elses, for-loops, etc
-	require("plugins.autoformat"), -- fix spacing/indents on a per-lang basis
+	require("plugins.formatting"), -- fix spacing/indents on a per-lang basis
 	require("plugins.dap"), -- debugger
-	require("plugins.ai-avante"), -- debugger
+	require("plugins.obsidian"), -- obsidian manager
+	require("plugins.ai-avante"), -- bot wrangler
 	-- require("plugins.ai-vectorcode"), -- codebase/workspace embeddings to add context to the bot
 	-- require("plugins.ai-codecompanion"), -- ai features
 	require("plugins.quarto"), -- quarto document/webpage dev

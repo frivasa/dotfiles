@@ -4,25 +4,6 @@ return {
 	build = "make", -- ⚠️ must add this line! ! !
 	event = "VeryLazy",
 	version = false, -- Never set this value to "*"! Never!
-	opts = {
-		-- add any opts here
-		-- for example
-		mode = "legacy",
-		provider = "ollama",
-		providers = {
-			ollama = {
-				endpoint = "http://localhost:8090",
-				model = "qwen3:latest",
-				extra_request_body = {
-					options = {
-						num_ctx = 32768,
-						temperature = 0.1,
-						keep_alive = "5m",
-					},
-				},
-			},
-		},
-	},
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 		"nvim-lua/plenary.nvim",
@@ -60,6 +41,21 @@ return {
 				file_types = { "markdown", "Avante" },
 			},
 			ft = { "markdown", "Avante" },
+		},
+	},
+	opts = {
+		mode = "legacy",
+		provider = "ollama",
+		providers = {
+			ollama = {
+				endpoint = "http://localhost:8090",
+				model = "qwen3:latest",
+				is_env_set = function()
+					return true
+				end,
+			},
+			vertex = { hide_in_model_selector = true },
+			vertex_claude = { hide_in_model_selector = true },
 		},
 	},
 }

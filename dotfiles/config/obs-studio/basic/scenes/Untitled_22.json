@@ -80,7 +80,7 @@
             "id": "image_source",
             "versioned_id": "image_source",
             "settings": {
-                "file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/f62329624.jpg"
+                "file": "/run/media/fdo/Shoemaker/41.Leisure/31.obsStream/f62329624.jpg"
             },
             "mixers": 0,
             "sync": 0,
@@ -146,8 +146,8 @@
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "looping": true,
-                "local_file": "/run/media/fdo/Shoemaker/90.Leisure/31.obsStream/background_03.mp4"
+                "local_file": "/run/media/fdo/Shoemaker/41.Leisure/31.obsStream/background_03.mp4",
+                "looping": true
             },
             "mixers": 255,
             "sync": 0,
@@ -1183,12 +1183,12 @@
                     "size": 200,
                     "flags": 1
                 },
+                "antialiasing": true,
                 "word_wrap": false,
                 "outline": true,
                 "drop_shadow": true,
                 "color1": 4294967295,
-                "color2": 4285037059,
-                "antialiasing": true
+                "color2": 4285037059
             },
             "mixers": 0,
             "sync": 0,

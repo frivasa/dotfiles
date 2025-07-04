@@ -12,7 +12,7 @@ return {
 		require("mini.ai").setup()
 		require("mini.surround").setup()
 		-- require("mini.notify").setup()
-		-- <leader>ENTER to jump by chars to position hints (noice)
+		-- <leader>ENTER to jump by chars to position hints (nice)
 		require("mini.jump2d").setup({
 			mappings = { start_jumping = "g<CR>" },
 		})

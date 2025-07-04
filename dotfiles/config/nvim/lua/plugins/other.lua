@@ -24,73 +24,44 @@ return {
 			},
 		},
 	},
-	{ -- rename word udner cursor based on context
+	-- { -- adds icons to file explorer but seems to do shit with mini.files
+	-- 	"prichrd/netrw.nvim",
+	-- 	opts = {},
+	-- },
+	{ -- rename word under cursor based on context
 		"smjonas/inc-rename.nvim",
 		opts = {},
 	},
-	{ -- notifications
-		"folke/noice.nvim",
-		event = "VeryLazy", -- load at end of init
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-		opts = {
-			messages = {
-				view_error = "split",
-				view_search = false,
-			},
-			popupmenu = { backend = "cmp" },
-			lsp = {
-				progress = { enabled = false },
-				override = {
-					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-					["vim.lsp.util.stylize_markdown"] = true,
-					["cmp.entry.get_documentation"] = true,
-				},
-			},
-			-- routes = {
-			-- 	filter = {
-			-- event = "lsp",
-			-- kind = "progress",
-			-- cond = function(message)
-			-- 	local client = vim.tbl_get(message.opts, "progress", "client")
-			-- 	return client == "pyright"
-			-- end,
-			-- filter = {
-			-- 	event = "msg_show",
-			-- 	any = {
-			-- 		{ find = "%d+L, %d+B" },
-			-- 		{ find = "; after #%d+" },
-			-- 		{ find = "; before #%d+" },
-			-- 	},
-			-- },
-			-- view = "mini",
-			-- 	},
-			-- },
-			presets = {
-				bottom_search = true, -- use a classic bottom cmdline for search
-				command_palette = true, -- position the cmdline and popupmenu together
-				long_message_to_split = true, -- long messages will be sent to a split
-				inc_rename = true, -- enables an input dialog for inc-rename.nvim
-				lsp_doc_border = true, -- add a border to hover docs and signature help
-			},
-		},
-	},
-	-- opts = {
-	-- 	routes = {
-	-- 		{
-	-- 			filter = {
-	-- 				event = "lsp",
-	-- 				kind = "progress",
-	-- 				-- cond = function(message)
-	-- 	local client = vim.tbl_get(message.opts, "progress", "client")
-	-- 	return client == "pyright"
-	-- end,
-	-- },
-	-- opts = { skip = true },
-	-- },
-	-- },
+	-- { -- notifications
+	-- 	"folke/noice.nvim",
+	-- 	event = "VeryLazy", -- load at end of init
+	-- 	dependencies = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"rcarriga/nvim-notify",
+	-- 	},
+	-- 	opts = {
+	-- 		messages = {
+	-- 			view_error = "notify", -- notify
+	-- 			view_search = false,
+	-- 		},
+	-- 		popupmenu = { backend = "blink" },
+	-- 		lsp = {
+	-- 			progress = { enabled = false },
+	-- 			override = {
+	-- 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+	-- 				["vim.lsp.util.stylize_markdown"] = true,
+	-- 				-- this might not work with blink?
+	-- 				["cmp.entry.get_documentation"] = true,
+	-- 			},
+	-- 		},
+	-- 		presets = {
+	-- 			bottom_search = true, -- use a classic bottom cmdline for search
+	-- 			command_palette = false, -- position the cmdline and popupmenu together
+	-- 			long_message_to_split = true, -- long messages will be sent to a split
+	-- 			inc_rename = true, -- enables an input dialog for inc-rename.nvim
+	-- 			lsp_doc_border = true, -- add a border to hover docs and signature help
+	-- 		},
+	-- 	},
 	-- },
 	{ -- autoclose brackets
 		"windwp/nvim-autopairs",
@@ -101,7 +72,7 @@ return {
 			mode = "foreground",
 		},
 	},
-	--	{ -- highlight some keywords in comments
+	--	{ -- highlight keywords in comments
 	--		"folke/todo-comments.nvim",
 	--		event = "VimEnter",
 	--		dependencies = { "nvim-lua/plenary.nvim" },
@@ -113,15 +84,19 @@ return {
 			require("colorizer").setup()
 		end,
 	},
-	-- codecompanion add-ons (mostly markdown)
-	{
+	{ -- codecompanion add-ons (mostly markdown)
 		"MeanderingProgrammer/render-markdown.nvim",
-		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
 		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
-		---@module 'render-markdown'
-		---@type render.md.UserConfig
 		opts = {
 			ft = { "markdown", "codecompanion" },
 		},
+	},
+	{ -- see your undo/redos + diff, oh god this is beautiful
+		"mbbill/undotree",
+		lazy = false,
+		config = function()
+			vim.g.undotree_WindowLayout = 2
+			vim.keymap.set("n", "<leader>tu", "<CMD>UndotreeToggle <CR>", { desc = "Toggle undo tree" }, opts)
+		end,
 	},
 }

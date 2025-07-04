@@ -61,25 +61,6 @@ function M.setup()
 	vim.api.nvim_set_hl(0, "NotifyINFOIcon", { link = "Comment" })
 	vim.api.nvim_set_hl(0, "NotifyINFOBorder", { link = "Comment" })
 	vim.api.nvim_set_hl(0, "NotifyINFOTitle", { link = "Comment" })
-	-- "NotifyERRORBorder"       xxx guifg=#8a1f1f
-	-- "NotifyWARNBorder"       xxx guifg=#79491d
-	-- "NotifyINFOBorder"       xxx guifg=#4f6752
-	-- "NotifyDEBUGBorder"       xxx guifg=#8b8b8b
-	-- "NotifyTRACEBorder"       xxx guifg=#4f3552
-	-- "NotifyERRORIcon"       xxx guifg=#f70067
-	-- "NotifyWARNIcon"       xxx guifg=#f79000
-	-- "NotifyINFOIcon"       xxx guifg=#a9ff68
-	-- "NotifyDEBUGIcon"       xxx guifg=#8b8b8b
-	-- "NotifyTRACEIcon"       xxx guifg=#d484ff
-	-- "NotifyERRORTitle"       xxx guifg=#f70067
-	-- "NotifyWARNTitle"       xxx guifg=#f79000
-	-- "NotifyINFOTitle"       xxx guifg=#a9ff68
-	-- "NotifyDEBUGTitle"       xxx guifg=#8b8b8b
-	-- "NotifyTRACETitle"       xxx guifg=#d484ff
-	-- "NotifyWARNTitle8"       xxx guifg=#f69000
-	-- "NotifyWARNBorder8"       xxx guifg=#78491d
-	-- "NotifyWARNBody8"       xxx guifg=#bac2ce guibg=#10141b
-	-- "NotifyWARNIcon8"       xxx guifg=#f69000
 	vim.api.nvim_set_hl(0, "NoiceCmdline", { link = "Normal" })
 	vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { link = "Normal" })
 	vim.api.nvim_set_hl(0, "NoiceCmdlineIconCalculator", { link = "Normal" })
@@ -158,6 +139,12 @@ function M.setup()
 	vim.api.nvim_set_hl(0, "NoiceSplit", { link = "Normal" })
 	vim.api.nvim_set_hl(0, "NoiceSplitBorder", { link = "Normal" })
 	vim.api.nvim_set_hl(0, "NoiceVirtualText", { link = "Normal" })
+	-- undotree.nvim
+	-- vim.api.nvim_set_hl(0, ".undotree_HighlightSyntaxAdd", { link = "Normal" })
+	-- vim.api.nvim_set_hl(0, ".undotree_HighlightSyntaxChange", { link = "Normal" })
+	-- vim.api.nvim_set_hl(0, ".undotree_HighlightSyntaxDel", { link = "Normal" })
+	-- vim.api.nvim_set_hl(0, ".undotree_HighlightChangedWithSign", { link = "Normal" })
+	-- vim.api.nvim_set_hl(0, ".undotree_HighlightChangedText", { link = "Normal" })
 
 	-- for name, _ in pairs(vim.api.nvim_get_hl(0, {})) do
 	-- 	if name:match("^Snacks") then

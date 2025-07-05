@@ -1,12 +1,13 @@
 local wk = require("which-key")
-local icons = require("mini.icons")
+-- local icons = require("mini.icons")
 local opts = { noremap = true, silent = true }
 local nor = { mode = "n", opts }
-local vis = { mode = "v", opts }
+-- local vis = { mode = "v", opts }
 -- noremap = nor+vis+select+operator (allows "repeatability")
 -- Aux Functions
 local function new_terminal(lang)
-	vim.cmd("vsplit term://" .. lang)
+	vim.cmd("split term://" .. lang)
+	vim.cmd("wincmd k")
 end
 
 local function new_terminal_python()
@@ -16,9 +17,15 @@ end
 local slime_send_region_cmd = ":<C-u>call slime#send_op(visualmode(), 1)<CR>"
 slime_send_region_cmd = vim.api.nvim_replace_termcodes(slime_send_region_cmd, true, false, true)
 local function send_region()
-	-- if filetyps is not quarto, just send_region
+	-- save location before sending the chunk
+	-- local bufnum, line, col, _ = unpack(vim.fn.getpos("'>"))
+	local _, line, col, _ = unpack(vim.fn.getpos("."))
+
+	-- if filetype is not quarto, just send_region
 	if vim.bo.filetype ~= "quarto" or vim.b["quarto_is_r_mode"] == nil then
 		vim.cmd("normal" .. slime_send_region_cmd)
+		-- recover position before returning
+		vim.api.nvim_win_set_cursor(0, { line, col - 1 })
 		return
 	end
 	if vim.b["quarto_is_r_mode"] == true then

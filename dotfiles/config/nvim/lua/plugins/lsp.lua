@@ -101,8 +101,10 @@ return {
 				"stylua",
 				"lua_ls",
 				"pylsp",
+				"pyright",
 				"jsonls",
 				"black",
+				"ruff-lsp",
 				"isort",
 				"prettier",
 			},
@@ -111,8 +113,8 @@ return {
 		local lspconfig = require("lspconfig")
 
 		lspconfig.lua_ls.setup({
+			capabilities = capabilities,
 			settings = {
-				capabilities = capabilities,
 				Lua = {
 					runtime = {
 						-- Tell the language server which version of Lua you're using
@@ -138,40 +140,22 @@ return {
 			},
 		})
 
-		lspconfig.pylsp.setup({
+		lspconfig.pyright.setup({
 			settings = {
-				pylsp = {
-					plugins = {
-						pycodestyle = { enabled = true },
-						pyflakes = { enabled = false },
-						mccabe = { enabled = false },
-						pylint = { enabled = false },
-						yapf = { enabled = false },
-						autopep8 = { enabled = false },
-						isort = { enabled = false },
-						flake8 = { enabled = false },
-						rope = { enabled = false },
-						pydocstyle = { enabled = false },
-						jedi_completion = { enabled = true },
-						jedi_hover = { enabled = true },
-						jedi_references = { enabled = true },
-						jedi_signature_help = { enabled = true },
-						jedi_symbols = { enabled = true },
+				pyright = {
+					python = {
+						analysis = { typeCheckingMode = "basic" },
 					},
-					-- formatter
-					black = { enabled = true },
-					-- linter (check for inconsistencies)
-					ruff = {
-						enabled = true,
-						extendSelect = { "I" }, -- import sorting
-					},
-					pylsp_mypy = { enabled = false },
-					pylsp_rope = { enabled = false },
-					pylsp_black = { enabled = true },
-					pylsp_isort = { enabled = true },
 				},
 			},
 		})
+
+		lspconfig.ruff_lsp = {
+			on_attach = function(client, _)
+				-- Optional: turn off hover/docs from Ruff
+				client.server_capabilities.hoverProvider = false
+			end,
+		}
 
 		-- leaving this in because this motherfucking loop destroys any config from the "servers" table that
 		-- used to be in this cursed fucking config. There's something wrong with the tbl_deep_extend args

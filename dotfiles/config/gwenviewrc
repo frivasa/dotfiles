@@ -1,3 +1,5 @@
+MenuBar=Disabled
+
 [Crop]
 CropAdvancedSettingsEnabled=true
 
@@ -5,7 +7,7 @@ CropAdvancedSettingsEnabled=true
 HistoryEnabled=false
 LastUsedVersion=210800
 ShowHiddenFiles=true
-SideBarPage=operations
+SideBarPage=folders
 UrlNavigatorIsEditable=true
 
 [ImageView]
@@ -19,8 +21,8 @@ MenuBar=Disabled
 
 [SideBar]
 InformationSplitterSizes=220,255
-SideBarSplitterSizes=210,610
+SideBarSplitterSizes=210,1065
 
 [ThumbnailView]
 ListVideos=false
-ThumbnailSize=320
+ThumbnailSize=262

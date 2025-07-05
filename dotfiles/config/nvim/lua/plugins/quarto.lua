@@ -1,14 +1,4 @@
--- return {
--- 	{
--- 		"quarto-dev/quarto-nvim",
--- 		dependencies = {
--- 			"jmbuhr/otter.nvim",
--- 			"nvim-treesitter/nvim-treesitter",
--- 		},
--- 	},
-
 return {
-
 	{ -- requires plugins in lua/plugins/treesitter.lua and lua/plugins/lsp.lua
 		-- for complete functionality (language features)
 		"quarto-dev/quarto-nvim",
@@ -88,53 +78,6 @@ return {
 			{ "<leader>qm", ':lua require"nabla".toggle_virt()<cr>', desc = "toggle [m]ath equations" },
 		},
 	},
-	-- {
-	-- 	"benlubas/molten-nvim",
-	-- 	dev = false,
-	-- 	enabled = true,
-	-- 	version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
-	-- 	build = ":UpdateRemotePlugins",
-	-- 	init = function()
-	-- 		vim.g.molten_image_provider = "image.nvim"
-	-- 		-- vim.g.molten_output_win_max_height = 20
-	-- 		vim.g.molten_auto_open_output = true
-	-- 		vim.g.molten_auto_open_html_in_browser = true
-	-- 		vim.g.molten_tick_rate = 200
-	-- 	end,
-	-- 	config = function()
-	-- 		local init = function()
-	-- 			local quarto_cfg = require("quarto.config").config
-	-- 			quarto_cfg.codeRunner.default_method = "molten"
-	-- 			vim.cmd([[MoltenInit]])
-	-- 		end
-	-- 		local deinit = function()
-	-- 			local quarto_cfg = require("quarto.config").config
-	-- 			quarto_cfg.codeRunner.default_method = "slime"
-	-- 			vim.cmd([[MoltenDeinit]])
-	-- 		end
-	-- 		vim.keymap.set("n", "<localleader>mi", init, { silent = true, desc = "Initialize molten" })
-	-- 		vim.keymap.set("n", "<localleader>md", deinit, { silent = true, desc = "Stop molten" })
-	-- 		vim.keymap.set(
-	-- 			"n",
-	-- 			"<localleader>mp",
-	-- 			":MoltenImagePopup<CR>",
-	-- 			{ silent = true, desc = "molten image popup" }
-	-- 		)
-	-- 		vim.keymap.set(
-	-- 			"n",
-	-- 			"<localleader>mb",
-	-- 			":MoltenOpenInBrowser<CR>",
-	-- 			{ silent = true, desc = "molten open in browser" }
-	-- 		)
-	-- 		vim.keymap.set("n", "<localleader>mh", ":MoltenHideOutput<CR>", { silent = true, desc = "hide output" })
-	-- 		vim.keymap.set(
-	-- 			"n",
-	-- 			"<localleader>ms",
-	-- 			":noautocmd MoltenEnterOutput<CR>",
-	-- 			{ silent = true, desc = "show/enter output" }
-	-- 		)
-	-- 	end,
-	-- },
 	{ -- send code from python/r/qmd documets to a terminal or REPL
 		-- like ipython, R, bash
 		"jpalardy/vim-slime",
@@ -163,7 +106,7 @@ return {
 
 			vim.g.slime_target = "neovim"
 			vim.g.slime_no_mappings = true
-			vim.g.slime_python_ipython = 1
+			-- vim.g.slime_python_ipython = 1
 		end,
 		config = function()
 			vim.g.slime_input_pid = false

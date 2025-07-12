@@ -5,7 +5,7 @@ vim.g.have_nerd_font = true
 vim.g.slime_python_ipython = 0
 vim.o.number = true
 vim.o.confirm = true
-vim.o.relativenumber = false -- relative line numbers
+vim.o.relativenumber = true -- relative line numbers
 vim.o.clipboard = "unnamedplus" -- sync os and nvim clipboard
 vim.o.wrap = false -- Display lines as one long line (default: true)
 vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
@@ -40,7 +40,7 @@ vim.o.updatetime = 2000 -- Decrease update time (default: 4000)
 vim.o.timeoutlen = 1000 -- Time to wait for a mapped sequence to complete (in milliseconds) (default: 1000)
 vim.o.backup = false -- Creates a backup file (default: false)
 vim.o.writebackup = false -- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited (default: true)
-vim.o.undofile = false -- Save undo history (default: false)
+vim.o.undofile = true -- Save undo history (default: false)
 vim.o.completeopt = "menuone,noselect" -- Set completeopt to have a better completion experience (default: 'menu,preview')
 -- vim.opt.shortmess:append("c") -- Don't give |ins-completion-menu| messages (default: does not include 'c')
 -- vim.opt.iskeyword:append("-") -- Hyphenated words recognized by searches (default: does not include '-')

@@ -5,6 +5,51 @@ local nor = { mode = "n", opts }
 -- local vis = { mode = "v", opts }
 -- noremap = nor+vis+select+operator (allows "repeatability")
 -- Aux Functions
+local function toggle_gutter()
+	local number = vim.wo.number
+	local relativenumber = vim.wo.relativenumber
+	local signcolumn = vim.wo.signcolumn
+
+	if number or relativenumber or signcolumn ~= "no" then
+		vim.wo.number = false
+		vim.wo.relativenumber = false
+		vim.wo.signcolumn = "no"
+	else
+		vim.wo.number = true
+		vim.wo.relativenumber = true
+		vim.wo.signcolumn = "auto"
+	end
+end
+
+local function trim(s)
+	return s:match("^%s*(.-)%s*$")
+end
+-- convert a column of values to a quoted list
+function QuoteAndCommaVisual()
+	-- '<,'> picks the last visual start and end
+	-- this does not work when used before the visual marks are set!
+	local mode = vim.fn.mode()
+	local start_line, end_line
+
+	if mode == "v" or mode == "V" then
+		local _, start_row, _, _ = unpack(vim.fn.getpos("v"))
+		local _, end_row, _, _ = unpack(vim.fn.getpos("."))
+		start_line = math.min(start_row, end_row) - 1
+		end_line = math.max(start_row, end_row)
+	else
+		start_line = vim.fn.line("'<") - 1
+		end_line = vim.fn.line("'>")
+	end
+	local lines = vim.api.nvim_buf_get_lines(0, start_line, end_line, false)
+
+	for i, line in ipairs(lines) do
+		local trimmed = trim(line)
+		lines[i] = '"' .. trimmed .. '",'
+	end
+	vim.api.nvim_buf_set_lines(0, start_line, end_line, false, lines)
+	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
+end
+
 local function new_terminal(lang)
 	vim.cmd("split term://" .. lang)
 	vim.cmd("wincmd k")
@@ -46,6 +91,7 @@ end
 -- command is really picky, put it close to the function so that it works
 wk.add({
 	{ "<CR>", send_region, desc = "Run Code Region", mode = "v" },
+	{ "<leader>iq", QuoteAndCommaVisual, desc = "Quote lines", mode = "v" },
 })
 
 -- "local" keymaps
@@ -124,6 +170,7 @@ wk.add({
 	{ "<leader>xx", "<CMD>bdelete!<CR>", desc = "Close Buffer", nor },
 	{ "<leader>xs", "<CMD>close<CR>", desc = "Close Split", nor },
 	{ "<leader>t", group = "Toggles", icon = { icon = "󰨚 ", color = "purple" } },
+	{ "<leader>tg", toggle_gutter, desc = "Toggle Gutter (line numbers, git symbols, etc)", nor },
 	{ "<leader>te", "<C-w>=", desc = "Equalize Splits", nor },
 	{ "<leader>tp", "<CMD>BufferLineTogglePin <CR>", desc = "Toggle Pinned", mode = { "n", "v" }, opts },
 	{ "<leader>tw", "<CMD>set wrap!<CR>", desc = "Toggle Wrap", nor },

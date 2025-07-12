@@ -246,7 +246,7 @@
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
                 "ShowCursor": false,
-                "RestoreToken": "b169d7e7-ac15-4cbe-839a-60ef1547ad7c"
+                "RestoreToken": "d0b8d1c7-af56-4602-a113-0e40e70b5791"
             },
             "mixers": 0,
             "sync": 0,
@@ -498,20 +498,20 @@
                         "id": 3,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 387.0,
-                            "y": 582.0
+                            "x": 382.0,
+                            "y": 585.0
                         },
                         "pos_rel": {
-                            "x": -1.0611110925674438,
-                            "y": 0.07777774333953857
+                            "x": -1.0703703165054321,
+                            "y": 0.08333337306976318
                         },
                         "scale": {
-                            "x": 1.1178107261657715,
-                            "y": 1.1174004077911377
+                            "x": 1.094619631767273,
+                            "y": 1.0952380895614624
                         },
                         "scale_rel": {
-                            "x": 1.1178107261657715,
-                            "y": 1.1174004077911377
+                            "x": 1.094619631767273,
+                            "y": 1.0952380895614624
                         },
                         "bounds": {
                             "x": 0.0,
@@ -1113,7 +1113,7 @@
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
                 "ShowCursor": false,
-                "RestoreToken": "afcb0648-341a-48f0-badb-bb4ff0bb25c9"
+                "RestoreToken": "2b574c11-f755-43ac-9e86-079516c2d088"
             },
             "mixers": 0,
             "sync": 0,
@@ -1215,7 +1215,7 @@
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
                 "ShowCursor": false,
-                "RestoreToken": "359b7be1-bce1-48ea-8a83-04869cc4cd94"
+                "RestoreToken": "4816ddeb-fd33-4e7f-a1fb-267e18fc2c48"
             },
             "mixers": 0,
             "sync": 0,
@@ -1245,10 +1245,10 @@
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
                         "shape_frame_check": false,
-                        "shape_center_x": 616.0,
-                        "shape_center_y": 264.0,
-                        "rectangle_width": 674.0,
-                        "rectangle_height": 341.0,
+                        "shape_center_x": 592.0,
+                        "shape_center_y": 268.0,
+                        "rectangle_width": 606.0,
+                        "rectangle_height": 359.0,
                         "position_x": 527,
                         "position_y": 212.5,
                         "mask_gradient_position": 527
@@ -1361,7 +1361,14 @@
         }
     ],
     "transitions": [],
-    "saved_projectors": [],
+    "saved_projectors": [
+        {
+            "monitor": -1,
+            "type": 2,
+            "geometry": "AdnQywADAAAAAAQ4AAAB4AAADjUAAAdhAAAEOAAAAeAAAA41AAAHYQAAAAEAAAAACgAAAAQ4AAAB4AAADjUAAAdh",
+            "alwaysOnTopOverridden": false
+        }
+    ],
     "current_transition": "Fade",
     "transition_duration": 300,
     "preview_locked": false,

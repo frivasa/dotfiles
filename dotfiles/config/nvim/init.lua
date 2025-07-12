@@ -27,8 +27,6 @@ require("lazy").setup({
 	require("plugins.dap"), -- debugger
 	require("plugins.obsidian"), -- obsidian manager
 	require("plugins.ai-avante"), -- bot wrangler
-	-- require("plugins.ai-vectorcode"), -- codebase/workspace embeddings to add context to the bot
-	-- require("plugins.ai-codecompanion"), -- ai features
 	require("plugins.quarto"), -- quarto document/webpage dev
 	require("plugins.snacks"), -- group of QoL plugins
 	-- image: show images/pdfs through kitty (nice)
@@ -43,9 +41,12 @@ require("lazy").setup({
 	require("plugins.other"), -- any other few-line plugins
 	-- tpope/vim-surround (add chars around things)
 	-- folke/which-key.nvim (keymap hints)
-	-- folke/noice (notification/command pop-ups)
+	-- smjonas/inc-rename.nvim (rename based on context)
 	-- windwp/nvim-autopairs (autoclose brackets)
 	-- norcalli/nvim-colorizer (paint hex codes: #d7afaf)
+	-- MeanderingProgrammer/render-markdown.nvim (md renderer)
+	-- mbbill/undotree (show history of undo/redo)
+	-- nvim-treesitter/nvim-treesitter-context (drags indent context with pane)
 })
 
 require("config.keymaps")

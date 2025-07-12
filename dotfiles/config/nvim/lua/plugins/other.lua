@@ -84,7 +84,7 @@ return {
 			require("colorizer").setup()
 		end,
 	},
-	{ -- codecompanion add-ons (mostly markdown)
+	{ -- markdown highlight/rendering on normal mode
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
 		opts = {
@@ -96,7 +96,17 @@ return {
 		lazy = false,
 		config = function()
 			vim.g.undotree_WindowLayout = 2
-			vim.keymap.set("n", "<leader>tu", "<CMD>UndotreeToggle <CR>", { desc = "Toggle undo tree" }, opts)
+			vim.keymap.set("n", "<leader>tu", "<CMD>UndotreeToggle <CR>", {
+				desc = "Toggle undo tree",
+			})
 		end,
 	},
+	{ -- drag starting indent lines with pane (like always see the definition of a function)
+		"nvim-treesitter/nvim-treesitter-context",
+		opts = {},
+	},
+	-- {
+	-- 	"mluders/comfy-line-numbers.nvim",
+	-- 	opts = {},
+	-- },
 }

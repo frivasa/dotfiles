@@ -29,24 +29,9 @@ require("lazy").setup({
 	require("plugins.ai-avante"), -- bot wrangler
 	require("plugins.quarto"), -- quarto document/webpage dev
 	require("plugins.snacks"), -- group of QoL plugins
-	-- image: show images/pdfs through kitty (nice)
-	-- bigfile: disable some plugins with large files
-	-- indent: mark indent lines and levels
-	-- scroll: animate scrolling to make it smoother
 	require("plugins.mini"), -- shitload of plugins
-	-- files: yazi-like file browser
-	-- splitjoin: swap arguments, bunch up or one-line parameters
-	-- jump2d: key-hint navigation
-	-- map: show overview of file (:lua MiniMap.open())
 	require("plugins.other"), -- any other few-line plugins
-	-- tpope/vim-surround (add chars around things)
-	-- folke/which-key.nvim (keymap hints)
-	-- smjonas/inc-rename.nvim (rename based on context)
-	-- windwp/nvim-autopairs (autoclose brackets)
-	-- norcalli/nvim-colorizer (paint hex codes: #d7afaf)
-	-- MeanderingProgrammer/render-markdown.nvim (md renderer)
-	-- mbbill/undotree (show history of undo/redo)
-	-- nvim-treesitter/nvim-treesitter-context (drags indent context with pane)
+	require("plugins.venn"), -- draw diagrams?
 })
 
 require("config.keymaps")

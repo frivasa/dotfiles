@@ -24,45 +24,10 @@ return {
 			},
 		},
 	},
-	-- { -- adds icons to file explorer but seems to do shit with mini.files
-	-- 	"prichrd/netrw.nvim",
-	-- 	opts = {},
-	-- },
 	{ -- rename word under cursor based on context
 		"smjonas/inc-rename.nvim",
 		opts = {},
 	},
-	-- { -- notifications
-	-- 	"folke/noice.nvim",
-	-- 	event = "VeryLazy", -- load at end of init
-	-- 	dependencies = {
-	-- 		"MunifTanjim/nui.nvim",
-	-- 		"rcarriga/nvim-notify",
-	-- 	},
-	-- 	opts = {
-	-- 		messages = {
-	-- 			view_error = "notify", -- notify
-	-- 			view_search = false,
-	-- 		},
-	-- 		popupmenu = { backend = "blink" },
-	-- 		lsp = {
-	-- 			progress = { enabled = false },
-	-- 			override = {
-	-- 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-	-- 				["vim.lsp.util.stylize_markdown"] = true,
-	-- 				-- this might not work with blink?
-	-- 				["cmp.entry.get_documentation"] = true,
-	-- 			},
-	-- 		},
-	-- 		presets = {
-	-- 			bottom_search = true, -- use a classic bottom cmdline for search
-	-- 			command_palette = false, -- position the cmdline and popupmenu together
-	-- 			long_message_to_split = true, -- long messages will be sent to a split
-	-- 			inc_rename = true, -- enables an input dialog for inc-rename.nvim
-	-- 			lsp_doc_border = true, -- add a border to hover docs and signature help
-	-- 		},
-	-- 	},
-	-- },
 	{ -- autoclose brackets
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
@@ -72,12 +37,6 @@ return {
 			mode = "foreground",
 		},
 	},
-	--	{ -- highlight keywords in comments
-	--		"folke/todo-comments.nvim",
-	--		event = "VimEnter",
-	--		dependencies = { "nvim-lua/plenary.nvim" },
-	--		opts = { signs = false },
-	--	},
 	{ -- color highlighter
 		"norcalli/nvim-colorizer.lua",
 		config = function()
@@ -88,7 +47,10 @@ return {
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
 		opts = {
-			ft = { "markdown", "codecompanion" },
+			callout = {
+				note = { raw = "[!NOTE]", rendered = "󰋽 Note", highlight = "RenderMarkdownInfo" },
+			},
+			ft = { "markdown", "Avante" },
 		},
 	},
 	{ -- see your undo/redos + diff, oh god this is beautiful
@@ -105,7 +67,61 @@ return {
 		"nvim-treesitter/nvim-treesitter-context",
 		opts = {},
 	},
-	-- {
+	{
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		opts = {
+			label = {
+				rainbow = {
+					enabled = false,
+					shade = 8,
+				},
+			},
+		},
+		keys = {
+			{
+				"s",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").jump()
+				end,
+				desc = "Flash",
+			},
+			{
+				"S",
+				mode = { "n", "x", "o" },
+				function()
+					require("flash").treesitter()
+				end,
+				desc = "Flash Treesitter",
+			},
+			{
+				"r",
+				mode = "o",
+				function()
+					require("flash").remote()
+				end,
+				desc = "Remote Flash",
+			},
+			{
+				"R",
+				mode = { "o", "x" },
+				function()
+					require("flash").treesitter_search()
+				end,
+				desc = "Treesitter Search",
+			},
+			{
+				"<c-s>",
+				mode = { "c" },
+				function()
+					require("flash").toggle()
+				end,
+				desc = "Toggle Flash Search",
+			},
+		},
+	},
+	-- { -- show 1234 only in line numbers (does not work well with hidding-gutter)
 	-- 	"mluders/comfy-line-numbers.nvim",
 	-- 	opts = {},
 	-- },

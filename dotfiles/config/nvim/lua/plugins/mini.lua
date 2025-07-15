@@ -3,19 +3,14 @@ return {
 	config = function()
 		-- oil-capable, yazi-like file browser overlay
 		require("mini.files").setup({
-			init = function()
-				--skip
-			end,
+			init = function() end,
 		})
 		-- gS to split/join argument groups into one-per-line or all in a single one
 		require("mini.splitjoin").setup()
-		require("mini.ai").setup()
-		require("mini.surround").setup()
-		-- require("mini.notify").setup()
+		require("mini.surround").setup() -- pick bracketed stuff, delete/add brackets
 		-- <leader>ENTER to jump by chars to position hints (nice)
-		require("mini.jump2d").setup({
-			mappings = { start_jumping = "g<CR>" },
-		})
+		-- require("mini.jump2d") -- char code mvmt, superseeded by flash.nvim
+		-- require("mini.ai").setup() -- textobject mvmt, superseeded by flash.nvim
 		-- require("mini.diff").setup({
 		-- 	source = require("mini.diff").gen_source.none(),
 		-- })

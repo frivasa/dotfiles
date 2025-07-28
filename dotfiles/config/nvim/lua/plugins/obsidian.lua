@@ -23,20 +23,6 @@ return {
 		notes_subdir = "_nvim-temps",
 		new_notes_location = "notes_subdir",
 		mappings = {
-			-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
-			["gf"] = {
-				action = function()
-					return require("obsidian").util.gf_passthrough()
-				end,
-				opts = { noremap = false, expr = true, buffer = true },
-			},
-			-- Toggle check-boxes.
-			["<leader>tc"] = {
-				action = function()
-					return require("obsidian").util.toggle_checkbox()
-				end,
-				opts = { buffer = true, desc = "Toggle Checkbox" },
-			},
 			-- Smart action depending on context, either follow link or toggle checkbox.
 			["<cr>"] = {
 				action = function()

@@ -108,3 +108,5 @@ function y() {
 # fastfetch
 # curl "wttr.in/Santiago,Chile?format=%l:+%C+%t(humidity:%h)(precip:%p+mm/3h)+%m+(%M)\n+(Rise/Zenith/Set)+%S+%z+%s\n"
 
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

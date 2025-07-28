@@ -45,7 +45,6 @@ printf $hl
 
 output="$(cat << THEME
 [ColorEffects:Disabled]
-Color=$bg
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.0
@@ -54,13 +53,15 @@ IntensityAmount=0.0
 IntensityEffect=0
 
 [ColorEffects:Inactive]
-Color=$bg
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.0
 ContrastEffect=0
 IntensityAmount=0.0
 IntensityEffect=0
+
+[Colors:Disabled]
+Foreground=$hl
 
 [Colors:Button]
 ForegroundNormal=$fg

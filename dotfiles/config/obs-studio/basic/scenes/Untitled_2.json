@@ -1,6 +1,6 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520093700,
         "name": "Desktop Audio",
         "uuid": "4b14277b-aec9-423b-b5a5-73aadd441be5",
         "id": "pulse_output_capture",
@@ -31,7 +31,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520093700,
         "name": "Mic/Aux",
         "uuid": "4baf6367-0eef-4811-a7ff-f650ed6ddffb",
         "id": "pulse_input_capture",
@@ -80,7 +80,7 @@
     "name": "Untitled 2",
     "sources": [
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "alo",
             "uuid": "37da962c-9854-4c5c-9d87-bb45139c4976",
             "id": "image_source",
@@ -106,7 +106,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "crop_alo",
                     "uuid": "1bd3f6a4-55bb-4e17-aeac-c2827f75b7c3",
                     "id": "advanced_masks_filter",
@@ -154,7 +154,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "alo33",
             "uuid": "ec2680b3-f9f9-46bf-b727-44f64ecce2e3",
             "id": "text_ft2_source",
@@ -192,7 +192,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "marquee_brb",
             "uuid": "feb574eb-7350-41b1-b382-478bcbd25e1b",
             "id": "ffmpeg_source",
@@ -229,7 +229,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Media Source",
             "uuid": "99619e4c-e4a8-4e53-94be-bc4a475877df",
             "id": "ffmpeg_source",
@@ -265,7 +265,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Message",
             "uuid": "8c220baf-f827-4858-9166-577467efba46",
             "id": "text_ft2_source",
@@ -296,7 +296,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "pantalla (brb)",
             "uuid": "c51d91d3-680b-4f95-8b69-f5437446f2bc",
             "id": "scene",
@@ -441,7 +441,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "quad",
             "uuid": "ae8ff9cd-f145-46cf-8bdb-f03ebb4a74e6",
             "id": "scene",
@@ -692,11 +692,11 @@
                         "group_item_backup": false,
                         "pos": {
                             "x": 549.0,
-                            "y": 651.0
+                            "y": 653.0
                         },
                         "pos_rel": {
                             "x": -0.7611111402511597,
-                            "y": 0.20555555820465088
+                            "y": 0.2092592716217041
                         },
                         "scale": {
                             "x": 0.8221757411956787,
@@ -871,7 +871,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "simple single monitor",
             "uuid": "30a47ce8-ec9d-4360-b3a6-24279e40816d",
             "id": "scene",
@@ -959,7 +959,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "The Big One",
             "uuid": "5f7355e9-8869-49ba-8fdb-c160b28d472a",
             "id": "scene",
@@ -1148,10 +1148,10 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
                 "libobs.show_scene_item.3": [],
                 "libobs.hide_scene_item.3": []
             },
@@ -1161,13 +1161,13 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Data",
             "uuid": "88382d49-13df-421c-90b2-7f89b2a32fc1",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "2f0cfa8b-e6ee-4826-8b8a-90ef11f0fbb7"
+                "RestoreToken": "2a9fd7ad-f8f8-4e24-8d5c-dbd73de81891"
             },
             "mixers": 0,
             "sync": 0,
@@ -1187,7 +1187,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "wind",
                     "uuid": "2be29852-3a29-4f46-a8e4-dd8915705dbb",
                     "id": "advanced_masks_filter",
@@ -1222,13 +1222,13 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "main",
             "uuid": "e3ce6d59-a222-4c44-8d55-1e14c078ff7f",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "88a3f46d-a9e7-49a4-832d-b7ade05f3ff4"
+                "RestoreToken": "f59901f6-732a-48cb-9984-531cf7096640"
             },
             "mixers": 0,
             "sync": 0,
@@ -1248,7 +1248,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "wind",
                     "uuid": "f8fa0442-a746-47d3-b6c7-b0ec9f9683ec",
                     "id": "advanced_masks_filter",
@@ -1285,13 +1285,13 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "tracker",
             "uuid": "069a1620-53b1-4f24-977d-0d8c0a3dfbf7",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "918f592e-5df7-4389-9aa2-b4bd28185536"
+                "RestoreToken": "7f93bfbd-74a2-4554-afd0-dd83888f19e9"
             },
             "mixers": 0,
             "sync": 0,
@@ -1311,7 +1311,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "wind",
                     "uuid": "819f1b0a-4f47-4044-b406-aa26a7f9979d",
                     "id": "advanced_masks_filter",
@@ -1321,9 +1321,9 @@
                         "shape_feather_type": 1,
                         "rectangle_corner_radius": 20.0,
                         "shape_center_x": 528.0,
-                        "shape_center_y": 297.0,
+                        "shape_center_y": 291.0,
                         "rectangle_width": 736.0,
-                        "rectangle_height": 436.0,
+                        "rectangle_height": 452.0,
                         "position_x": 539.0,
                         "position_y": 213.5,
                         "mask_gradient_position": 539.0
@@ -1348,7 +1348,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "strat",
             "uuid": "6060fa8e-1de3-4ddc-89c1-7e38ccf58a53",
             "id": "image_source",
@@ -1374,7 +1374,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "wind",
                     "uuid": "9754664c-014d-4b09-8ad0-6b2a91b297df",
                     "id": "advanced_masks_filter",
@@ -1411,7 +1411,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Screen Capture (PipeWire)",
             "uuid": "c4f83f9f-ea51-4321-9a72-8753ed1f729a",
             "id": "pipewire-screen-capture-source",
@@ -1437,7 +1437,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "confetti",
             "uuid": "63c49a1a-ea78-4fcf-a42e-8502f99f7103",
             "id": "ffmpeg_source",
@@ -1473,7 +1473,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Chroma Key",
                     "uuid": "3aeaa042-ca6e-4fd5-9754-1b626c1f1b1f",
                     "id": "chroma_key_filter",
@@ -1499,14 +1499,14 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "dance",
             "uuid": "e363049c-e7cf-4b26-be57-56ef82bbbe92",
             "id": "ffmpeg_source",
             "versioned_id": "ffmpeg_source",
             "settings": {
-                "looping": true,
-                "local_file": "/run/media/fdo/Shoemaker/41.Leisure/31.obsStream/alonso_celeb.mp4"
+                "local_file": "/run/media/fdo/Shoemaker/41.Leisure/31.obsStream/alonso_celeb.mp4",
+                "looping": true
             },
             "mixers": 255,
             "sync": 0,
@@ -1535,7 +1535,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "himno",
             "uuid": "7f7ac666-67a2-4f1d-bfeb-c5c1197394ab",
             "id": "ffmpeg_source",
@@ -1595,14 +1595,7 @@
         }
     ],
     "transitions": [],
-    "saved_projectors": [
-        {
-            "monitor": -1,
-            "type": 2,
-            "geometry": "AdnQywADAAAAAAeAAAAAAAAAEX0AAAWBAAAHgAAAAAAAABF9AAAFgQAAAAEAAAAACgAAAAeAAAAAAAAAEX0AAAWB",
-            "alwaysOnTopOverridden": false
-        }
-    ],
+    "saved_projectors": [],
     "current_transition": "Fade",
     "transition_duration": 300,
     "preview_locked": false,

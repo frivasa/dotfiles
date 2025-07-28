@@ -1,6 +1,6 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520093700,
         "name": "Desktop Audio",
         "uuid": "b70b298a-259e-4dde-9a1f-fad1db3fe0ee",
         "id": "pulse_output_capture",
@@ -31,7 +31,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 520093699,
+        "prev_ver": 520093700,
         "name": "Mic/Aux",
         "uuid": "90e3c5b5-03f3-44f0-a168-e4ad68fc62a2",
         "id": "pulse_input_capture",
@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "QUAL",
-    "current_program_scene": "QUAL",
+    "current_scene": "RACE",
+    "current_program_scene": "RACE",
     "scene_order": [
         {
             "name": "QUAL"
@@ -74,7 +74,7 @@
     "name": "Untitled 2",
     "sources": [
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "alo25",
             "uuid": "d0b17dba-8f60-44bc-ae3e-9da684b8d0ed",
             "id": "image_source",
@@ -100,7 +100,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Advanced Mask",
                     "uuid": "13443819-a600-4190-83e3-5df39f9615d5",
                     "id": "advanced_masks_filter",
@@ -140,7 +140,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "background",
             "uuid": "83057e37-9fff-425b-a60d-41d5ae675da3",
             "id": "ffmpeg_source",
@@ -176,13 +176,13 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "data",
             "uuid": "8095367f-d57c-493a-9b1e-d87cc794eb97",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "e61f5441-bfe4-44d1-be45-9940ae22930b"
+                "RestoreToken": "f004ff86-adc6-40bf-8912-3147fb4981fd"
             },
             "mixers": 0,
             "sync": 0,
@@ -202,7 +202,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Advanced Mask",
                     "uuid": "fe4f9d5a-b25a-4f5a-8547-49b96b28f9f2",
                     "id": "advanced_masks_filter",
@@ -211,9 +211,9 @@
                         "rectangle_corner_radius": 20,
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
-                        "shape_center_x": 274,
+                        "shape_center_x": 287.0,
                         "shape_center_y": 362,
-                        "rectangle_width": 541,
+                        "rectangle_width": 555.0,
                         "rectangle_height": 712,
                         "position_x": 527,
                         "position_y": 391.5,
@@ -239,14 +239,14 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "main",
             "uuid": "869ac505-24d1-4596-9491-b4d661aed23b",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
                 "ShowCursor": false,
-                "RestoreToken": "d0b8d1c7-af56-4602-a113-0e40e70b5791"
+                "RestoreToken": "61718fdd-3db9-4166-858a-45944d601da5"
             },
             "mixers": 0,
             "sync": 0,
@@ -266,7 +266,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Advanced Mask",
                     "uuid": "edec7485-ce16-44c3-a902-f89d6d254898",
                     "id": "advanced_masks_filter",
@@ -275,10 +275,10 @@
                         "rectangle_corner_radius": 20,
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
-                        "shape_center_x": 527,
-                        "shape_center_y": 295,
-                        "rectangle_width": 1033,
-                        "rectangle_height": 570,
+                        "shape_center_x": 478.5,
+                        "shape_center_y": 268.5,
+                        "rectangle_width": 945.0,
+                        "rectangle_height": 526.0,
                         "position_x": 527,
                         "position_y": 295,
                         "mask_gradient_position": 527
@@ -303,7 +303,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "QUAL",
             "uuid": "c69121fa-aaf6-4441-8d1b-3bf36dc89d0e",
             "id": "scene",
@@ -733,7 +733,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "RACE",
             "uuid": "a4aae776-c900-44cc-9de3-338207fa636c",
             "id": "scene",
@@ -763,12 +763,12 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": -252.0,
+                            "y": -27.0
                         },
                         "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
+                            "x": -2.2444443702697754,
+                            "y": -1.0499999523162842
                         },
                         "scale": {
                             "x": 1.7777777910232544,
@@ -779,12 +779,12 @@
                             "y": 1.7777777910232544
                         },
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 2236.0,
+                            "y": 1260.0
                         },
                         "bounds_rel": {
-                            "x": 3.555555582046509,
-                            "y": 2.0
+                            "x": 4.140740871429443,
+                            "y": 2.3333332538604736
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -873,12 +873,12 @@
                         "id": 3,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
-                            "y": 956.0
+                            "x": 311.0,
+                            "y": 920.5
                         },
                         "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": 0.770370364189148
+                            "x": -1.2018518447875977,
+                            "y": 0.7046364545822144
                         },
                         "scale": {
                             "x": 0.3836206793785095,
@@ -928,20 +928,20 @@
                         "id": 4,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 586.0,
-                            "y": -6.0
+                            "x": 601.0,
+                            "y": -5.0
                         },
                         "pos_rel": {
-                            "x": -0.6925926208496094,
-                            "y": -1.0111111402511597
+                            "x": -0.664814829826355,
+                            "y": -1.0092592239379883
                         },
                         "scale": {
-                            "x": 1.2656546831130981,
-                            "y": 1.2661017179489136
+                            "x": 1.3740856647491455,
+                            "y": 1.3743016719818115
                         },
                         "scale_rel": {
-                            "x": 1.2656546831130981,
-                            "y": 1.2661017179489136
+                            "x": 1.3740856647491455,
+                            "y": 1.3743016719818115
                         },
                         "bounds": {
                             "x": 0.0,
@@ -983,20 +983,20 @@
                         "id": 5,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 336.0,
-                            "y": 701.0
+                            "x": 474.0,
+                            "y": 675.0
                         },
                         "pos_rel": {
-                            "x": -1.1555556058883667,
-                            "y": 0.29814815521240234
+                            "x": -0.8999999761581421,
+                            "y": 0.25
                         },
                         "scale": {
-                            "x": 0.9459202885627747,
-                            "y": 0.9458823800086975
+                            "x": 0.7826541066169739,
+                            "y": 0.7821229100227356
                         },
                         "scale_rel": {
-                            "x": 0.9459202885627747,
-                            "y": 0.9458823800086975
+                            "x": 0.7826541066169739,
+                            "y": 0.7821229100227356
                         },
                         "bounds": {
                             "x": 0.0,
@@ -1038,12 +1038,12 @@
                         "id": 7,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1.0,
-                            "y": -2.0
+                            "x": -6.0,
+                            "y": -4.0
                         },
                         "pos_rel": {
-                            "x": -1.775925874710083,
-                            "y": -1.0037037134170532
+                            "x": -1.788888931274414,
+                            "y": -1.0074074268341064
                         },
                         "scale": {
                             "x": 1.0834914445877075,
@@ -1106,7 +1106,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "stats",
             "uuid": "8cc93f9a-94ef-4915-bfd4-ca425bfc50bb",
             "id": "pipewire-screen-capture-source",
@@ -1133,7 +1133,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Advanced Mask",
                     "uuid": "3eda0cfa-a886-4cb3-a993-10c9c0bd712d",
                     "id": "advanced_masks_filter",
@@ -1170,7 +1170,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Text (FreeType 2)",
             "uuid": "d53d9a31-0a02-44ac-b730-180455700918",
             "id": "text_ft2_source",
@@ -1208,14 +1208,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "tracker",
             "uuid": "bf847f65-be56-40cc-9262-801e4c44378b",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
                 "ShowCursor": false,
-                "RestoreToken": "4816ddeb-fd33-4e7f-a1fb-267e18fc2c48"
+                "RestoreToken": "c85c84ae-e7f2-4d4b-a4f9-3b480657f710"
             },
             "mixers": 0,
             "sync": 0,
@@ -1235,7 +1235,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Advanced Mask",
                     "uuid": "4023acb6-054d-4034-bce1-ce4779ab4e88",
                     "id": "advanced_masks_filter",
@@ -1245,10 +1245,10 @@
                         "rectangle_corner_type": 1,
                         "shape_feather_type": 1,
                         "shape_frame_check": false,
-                        "shape_center_x": 592.0,
-                        "shape_center_y": 268.0,
-                        "rectangle_width": 606.0,
-                        "rectangle_height": 359.0,
+                        "shape_center_x": 537.0,
+                        "shape_center_y": 292.0,
+                        "rectangle_width": 732.0,
+                        "rectangle_height": 443.0,
                         "position_x": 527,
                         "position_y": 212.5,
                         "mask_gradient_position": 527
@@ -1273,7 +1273,7 @@
             ]
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520093700,
             "name": "Image",
             "uuid": "1ee0ee57-9da2-4961-8cd3-af69ce1e4311",
             "id": "image_source",
@@ -1299,7 +1299,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093699,
+                    "prev_ver": 520093700,
                     "name": "Advanced Mask",
                     "uuid": "4d58dbc8-adb2-48d8-8e1e-61223481a30a",
                     "id": "advanced_masks_filter",
@@ -1363,9 +1363,9 @@
     "transitions": [],
     "saved_projectors": [
         {
-            "monitor": -1,
+            "monitor": 1,
             "type": 2,
-            "geometry": "AdnQywADAAAAAAQ4AAAB4AAADjUAAAdhAAAEOAAAAeAAAA41AAAHYQAAAAEAAAAACgAAAAQ4AAAB4AAADjUAAAdh",
+            "geometry": "AdnQywADAAAAAAeAAAAAAAAAEX8AAAWfAAAHgAAAAAAAABF/AAAFnwAAAAEABAAACgAAAAeAAAAAAAAAEX8AAAWf",
             "alwaysOnTopOverridden": false
         }
     ],
